@@ -50,7 +50,8 @@ li {
   float: left;
 }
 
-li a, .button {
+li a,
+.button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,9 +60,11 @@ li a, .button {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 1.2rem;
+  border-radius: 15px;
 }
 
-li a:hover, .button {
+li a:hover,
+.button {
   background-color: blue;
 }
 /*# sourceMappingURL=main.css.map */

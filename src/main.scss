@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -21,7 +21,7 @@ h3 {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 0.5rem;
 }
 
 section {
@@ -63,11 +63,24 @@ li a,
   text-decoration: none;
   font-size: 1.2rem;
   border-radius: 15px;
+  transition: all 0.3s;
 }
 
 li a:hover,
 .button {
   background-color: blue;
+}
+
+.circle {
+  background-color: #0c0032;
+  width: 20rem;
+  border-radius: 50%;
+  transform: scale(1.2);
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  transform: translateX(120%);
 }
 
 .home-container {
@@ -81,7 +94,7 @@ li a:hover,
 
 #logo-placeholder {
   position: relative;
-  background-color: #0c0032;
+  // background-color: #0c0032;
   width: 75%;
   z-index: 1;
   height: 20rem;

@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.scss" />
-    <script src="app.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
   </head>
   <body>
@@ -30,7 +30,10 @@
     </div>
     </section>
     <section id="our-mission">
-      <div class="mission-container">
+      <div data-aos='fade-right' 
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-sine"
+      class="mission-container">
         <h2>Our Mission</h2>
         <p>
           I grew up on the crime side, the New York Times side, Stayin' alive
@@ -53,5 +56,6 @@
         any questions.
       </h3>
     </section>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+    <script src='app.js'></script>
 </html>

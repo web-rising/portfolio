@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001294"
+  },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "parcel": "^2.0.0-beta.2"
+    "parcel": "^2.0.0-beta.2",
+    "sass": "^1.45.2"
   },
   "scripts": {
     "start": "parcel serve ./src/index.html",

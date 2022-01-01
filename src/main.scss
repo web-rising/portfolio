@@ -8,8 +8,9 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 5rem;
   margin: 0;
+  color: #240090;
 }
 
 h2 {
@@ -21,7 +22,7 @@ h3 {
 }
 
 p {
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 
 section {
@@ -73,14 +74,14 @@ li a:hover,
 
 .circle {
   background-color: #0c0032;
-  width: 20rem;
+  width: 40rem;
+  height: 40rem;
   border-radius: 50%;
-  transform: scale(1.2);
-  margin: 5rem;
+  margin: 4rem;
   display: flex;
   flex-direction: column;
   align-items: left;
-  transform: translateX(120%);
+  transform: translateX(100%);
 }
 
 .home-container {
@@ -90,6 +91,15 @@ li a:hover,
   width: 50%;
   position: absolute;
   z-index: 2;
+  transform: translate(-20%, 50%);
+}
+
+.learn-btn {
+  background-color: #240090;
+  // width: 10rem;
+  border-radius: 0.4rem;
+  color: white;
+  border: none;
 }
 
 #logo-placeholder {

@@ -134,3 +134,12 @@ li a:hover,
   display: flex;
   text-align: center;
 }
+#footer{
+  background-color: #3A3B3C;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}

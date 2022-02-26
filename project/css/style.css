@@ -153,3 +153,8 @@ header.sticky li a {
 .waves4 {
   background-image: url("/waves4.svg");
 }
+
+canvas {
+  height: 5rem;
+  position: absolute !important;
+}

@@ -9,7 +9,5 @@
   "devDependencies": {
     "vite": "^2.6.4"
   },
-  "dependencies": {
-    "tsparticles": "^1.41.4"
-  }
+  "dependencies": {}
 }

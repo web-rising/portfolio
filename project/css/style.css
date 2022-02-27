@@ -59,12 +59,17 @@ header {
 }
 
 header.nav {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 8px 100px;
 }
 
-header.sticky .logo,
-header.sticky li a {
+header.nav .logo,
+header.nav li a {
+  color: #fff;
+}
+
+header .logo,
+header li a {
   color: #151515;
 }
 
@@ -107,11 +112,18 @@ header.sticky li a {
 .amet {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   min-height: 620px;
-  padding: 100px 20vw;
+  padding: 100px 15vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .lorem {
@@ -125,6 +137,12 @@ header.sticky li a {
 .amet {
   background-color: #ffbdbd;
   color: #151515;
+}
+
+.icon {
+  width: 50%;
+  max-width: 450px;
+  margin: 0 20px;
 }
 
 /*shapedivider.app*/

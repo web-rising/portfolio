@@ -68,18 +68,8 @@ const particleConfig = {
   },
 };
 
-tsParticles.load("tsparticles", particleConfig, function () {
-  console.log("particles loaded");
-});
-tsParticles.load("tsparticles2", particleConfig, function () {
-  console.log("particles loaded");
-});
-tsParticles.load("tsparticles3", particleConfig, function () {
-  console.log("particles loaded");
-});
-tsParticles.load("tsparticles4", particleConfig, function () {
-  console.log("particles loaded");
-});
-tsParticles.load("tsparticles5", particleConfig, function () {
-  console.log("particles loaded");
-});
+tsParticles.load("tsparticles", particleConfig);
+tsParticles.load("tsparticles2", particleConfig);
+tsParticles.load("tsparticles3", particleConfig);
+tsParticles.load("tsparticles4", particleConfig);
+tsParticles.load("tsparticles5", particleConfig);

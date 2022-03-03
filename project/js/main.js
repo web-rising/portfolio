@@ -1,3 +1,10 @@
+import "../css/style.css";
+import { gsap } from "gsap";
+
+const tl = gsap.timeline({ delay: 0.2 });
+
+tl.from(".lorem", { opacity: 0, duration: 0.2 });
+
 window.addEventListener("load", function () {
   const header = document.querySelector("header");
   header.classList.remove("nav");

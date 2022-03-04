@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -141,11 +142,11 @@ header li a {
   color: #151515;
 }
 
-.particles {
+/* .particles {
   width: 70%;
   max-width: 700px;
   margin: 0 20px;
-}
+} */
 
 /*shapedivider.app*/
 /*haikei.app*/

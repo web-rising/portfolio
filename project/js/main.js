@@ -41,17 +41,17 @@ const particleConfig = {
       value: 0.5,
     },
     size: {
-      value: 5,
-      random: {
-        enable: !0,
-        minimumValue: 200,
-      },
+      value: 100,
+      // random: {
+      //   enable: !0,
+      //   minimumValue: 175,
+      // },
     },
     move: {
       enable: !0,
-      speed: 5,
+      speed: 2,
       direction: "top",
-      // outMode: "destroy",
+      outMode: "bounce",
     },
   },
   detectRetina: !0,
@@ -80,3 +80,5 @@ tsParticles.load("tsparticles2", particleConfig);
 tsParticles.load("tsparticles3", particleConfig);
 tsParticles.load("tsparticles4", particleConfig);
 tsParticles.load("tsparticles5", particleConfig);
+
+// gsap.from(".waves1", { x: 2500, duration: 2 });

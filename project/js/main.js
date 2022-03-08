@@ -1,9 +1,12 @@
 import "../css/style.css";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const tl = gsap.timeline({ delay: 0.2 });
+gsap.registerPlugin(ScrollTrigger);
+const tl = gsap.timeline({ ScrollTrigger: ".ipsum", delay: 0.5 });
 
-tl.from(".lorem", { opacity: 0, duration: 0.2 });
+tl.from("h2", { opacity: 0, duration: 0.2 });
+tl.from("p", { opacity: 0, duration: 0.2 });
 
 window.addEventListener("load", function () {
   const header = document.querySelector("header");

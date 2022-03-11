@@ -22,7 +22,7 @@ const particleConfig = {
   fpsLimit: 120,
   particles: {
     number: {
-      value: 2,
+      value: 3,
     },
     color: {
       value: [
@@ -44,7 +44,7 @@ const particleConfig = {
       value: 0.5,
     },
     size: {
-      value: 100,
+      value: 75,
       // random: {
       //   enable: !0,
       //   minimumValue: 175,
@@ -52,7 +52,7 @@ const particleConfig = {
     },
     move: {
       enable: !0,
-      speed: 2,
+      speed: 1.2,
       direction: "top",
       outMode: "bounce",
     },

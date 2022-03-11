@@ -142,11 +142,13 @@ header li a {
   color: #151515;
 }
 
-/* .particles {
-  width: 70%;
-  max-width: 700px;
+.particles {
+  height: 200px;
+  width: 50%;
+  max-width: 300px;
   margin: 0 20px;
-} */
+  overflow: hidden;
+}
 
 /*shapedivider.app*/
 /*haikei.app*/

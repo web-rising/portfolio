@@ -44,15 +44,15 @@ const particleConfig = {
       value: 0.5,
     },
     size: {
-      value: 75,
-      // random: {
-      //   enable: !0,
-      //   minimumValue: 175,
-      // },
+      value: 60,
+      random: {
+        enable: !0,
+        minimumValue: 100,
+      },
     },
     move: {
       enable: !0,
-      speed: 1.5,
+      speed: 1.7,
       direction: "top",
       outMode: "bounce",
     },

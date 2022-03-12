@@ -52,7 +52,7 @@ const particleConfig = {
     },
     move: {
       enable: !0,
-      speed: 1.2,
+      speed: 1.5,
       direction: "top",
       outMode: "bounce",
     },

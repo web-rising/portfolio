@@ -1,17 +1,17 @@
 import "../css/style.css";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-const tl = gsap.timeline({ ScrollTrigger: ".ipsum", delay: 0.5 });
+// AOS.init();
 
-tl.from("h2", { opacity: 0, duration: 0.2 });
-tl.from("p", { opacity: 0, duration: 0.2 });
+// gsap.registerPlugin(ScrollTrigger);
+// const tl = gsap.timeline({ ScrollTrigger: ".ipsum", delay: 0.5 });
 
-window.addEventListener("load", function () {
-  const header = document.querySelector("header");
-  header.classList.remove("nav");
-});
+// tl.from("h2", { opacity: 0, duration: 0.2 });
+// tl.from("p", { opacity: 0, duration: 0.2 });
+
+// window.addEventListener("load", function () {
+//   const header = document.querySelector("header");
+//   header.classList.remove("nav");
+// });
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
@@ -73,5 +73,3 @@ tsParticles.load("tsparticles2", particleConfig);
 tsParticles.load("tsparticles3", particleConfig);
 tsParticles.load("tsparticles4", particleConfig);
 tsParticles.load("tsparticles5", particleConfig);
-
-// gsap.from(".waves1", { x: 2500, duration: 2 });

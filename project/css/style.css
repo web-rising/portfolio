@@ -182,8 +182,8 @@ h3 {
 
 button {
   background-color: #987373;
-  opacity: 0.6;
   color: #fff;
+  opacity: 0.6;
   font-size: 1rem;
   font-family: "Avenir", Helvetica, sans-serif;
   margin: 1rem;
@@ -206,7 +206,7 @@ button:active {
 .particles {
   height: 15rem;
   width: 35vw;
-  margin: 0 3rem;
+  margin: 0 2rem;
   overflow: hidden;
 }
 

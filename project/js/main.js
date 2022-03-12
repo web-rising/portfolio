@@ -26,10 +26,10 @@ const particleConfig = {
     },
     color: {
       value: [
+        "#F54900",
+        "#F56416",
         "#FF8811",
-        "#FFC081",
         "#FFF8F0",
-        "#CEE9E1",
         "#9DD9D2",
         "#84AFB4",
         "#6B8496",
@@ -39,7 +39,6 @@ const particleConfig = {
         "#646297",
         "#8F95D3",
         "#58504A",
-        "#D3CDC6",
       ],
     },
     shape: {

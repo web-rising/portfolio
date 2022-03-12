@@ -127,7 +127,7 @@ header li a {
   align-items: center;
   justify-content: center;
   height: 82vh;
-  padding: 10rem 15vw;
+  padding: 10rem 16vw;
 }
 
 .container {
@@ -135,7 +135,7 @@ header li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 56vw;
+  width: 60vw;
 }
 
 .lorem {
@@ -181,8 +181,8 @@ h3 {
 }
 
 button {
-  background-color: #151515;
-  opacity: 0.4;
+  background-color: #987373;
+  opacity: 0.6;
   color: #fff;
   font-size: 1rem;
   font-family: "Avenir", Helvetica, sans-serif;
@@ -195,12 +195,12 @@ button {
 
 button:hover {
   cursor: pointer;
-  transform: scale(1.04);
-  opacity: 0.6;
+  transform: scale(1.03);
+  opacity: 0.75;
 }
 
 button:active {
-  transform: scale(0.99);
+  transform: scale(1);
 }
 
 .particles {

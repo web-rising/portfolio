@@ -8,10 +8,10 @@ import "../css/style.css";
 // tl.from("h2", { opacity: 0, duration: 0.2 });
 // tl.from("p", { opacity: 0, duration: 0.2 });
 
-// window.addEventListener("load", function () {
-//   const header = document.querySelector("header");
-//   header.classList.remove("nav");
-// });
+window.addEventListener("load", function () {
+  const header = document.querySelector("header");
+  header.classList.remove("nav");
+});
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
@@ -25,7 +25,19 @@ const particleConfig = {
       value: 3,
     },
     color: {
-      value: ["#3998D0", "#2EB6AF", "#F45623", "#D62E32", "#EB586E", "#9952CF"],
+      value: [
+        "#F54900",
+        "#F56416",
+        "#FF8811",
+        "#FFF8F0",
+        "#9DD9D2",
+        "#84AFB4",
+        "#525A78",
+        "#464569",
+        "#392F5A",
+        "#8F95D3",
+        "#58504A",
+      ],
     },
     shape: {
       type: "circle",

@@ -64,14 +64,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 5rem;
+  padding: 1.5rem 4rem;
   transition: all 0.5s;
-  z-index: 1;
+  z-index: 2;
 }
 
 header.nav {
   background-color: rgba(0, 0, 0, 0.15);
-  padding: 1rem 5.5rem;
+  padding: 1rem 4.5rem;
 }
 
 header.nav .logo,
@@ -265,6 +265,7 @@ button:active {
 
   header.nav {
     background-color: rgba(0, 0, 0, 0.15);
+    padding: 1rem 1.5rem;
   }
 
   .lorem,
@@ -358,7 +359,9 @@ button:active {
     width: 17rem;
     height: 15rem;
   }
-
+  .nav-list li a {
+    padding-left: 4.5rem;
+  }
   h1 {
     font-size: 2rem;
   }
@@ -366,7 +369,7 @@ button:active {
     font-size: 2.2rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   p {
     font-size: 1rem;
@@ -376,12 +379,12 @@ button:active {
   }
 
   header {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
   }
 
   header.nav {
     background-color: rgba(0, 0, 0, 0.15);
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.5rem;
   }
 
   .lorem,
@@ -415,4 +418,64 @@ button:active {
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
+  .particles {
+    width: 17rem;
+    height: 15rem;
+  }
+  .nav-list li a {
+    padding-left: 4.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1rem 3rem;
+  }
+
+  header.nav {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 1rem 3.3rem;
+  }
+
+  .lorem,
+  .ipsum,
+  .amet,
+  .dolor,
+  .sit {
+    height: 90vh;
+    padding: 10rem 3rem;
+    overflow: hidden;
+  }
+
+  .container {
+    z-index: 1;
+    width: 30rem;
+    padding: 1rem;
+  }
+
+  .developers {
+    width: 12rem;
+  }
+
+  .businesses {
+    width: 12rem;
+  }
+
+  button {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
 }

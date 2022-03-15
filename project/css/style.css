@@ -203,8 +203,8 @@ button:active {
 }
 
 .particles {
-  height: 15rem;
-  width: 25rem;
+  height: 17rem;
+  width: 20rem;
   overflow: hidden;
 }
 
@@ -234,219 +234,36 @@ button:active {
 }
 
 /*queries*/
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 650px) {
-  .particles {
-    position: absolute;
-    opacity: 0.6;
-    width: 20rem;
-    height: 20rem;
-  }
-  .nav-list {
-    display: none;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 2.4rem;
-  }
-  h3 {
-    font-size: 1.8rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-
-  header {
-    padding: 1rem 1.5rem;
-  }
-
-  header.nav {
-    background-color: rgba(0, 0, 0, 0.15);
-    padding: 1rem 1.5rem;
-  }
-
-  .lorem,
-  .ipsum,
-  .amet,
-  .dolor,
-  .sit {
-    height: 90vh;
-    padding: 10rem 0;
-    overflow: hidden;
-  }
-
-  .container {
-    z-index: 1;
-  }
-
-  .divider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .particles {
-    width: 17rem;
-    height: 15rem;
-  }
-  .nav-list {
-    display: none;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 2.2rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-
-  header {
-    padding: 1rem 1.5rem;
-  }
-
-  header.nav {
-    background-color: rgba(0, 0, 0, 0.15);
-    padding: 1rem 1.5rem;
-  }
-
-  .lorem,
-  .ipsum,
-  .amet,
-  .dolor,
-  .sit {
-    height: 90vh;
-    padding: 10rem 3rem;
-    overflow: hidden;
-  }
-
-  .container {
-    z-index: 1;
-    width: 30rem;
-    padding: 1rem;
-  }
-
-  .developers {
-    width: 12rem;
-  }
-
-  .businesses {
-    width: 12rem;
-  }
-
-  button {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
-  }
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-  .particles {
-    width: 17rem;
-    height: 15rem;
-  }
-  .nav-list li a {
-    padding-left: 4.5rem;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 2.2rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  li {
-    font-size: 1rem;
-  }
-
-  header {
-    padding: 1rem 2rem;
-  }
-
-  header.nav {
-    background-color: rgba(0, 0, 0, 0.15);
-    padding: 1rem 2.5rem;
-  }
-
-  .lorem,
-  .ipsum,
-  .amet,
-  .dolor,
-  .sit {
-    height: 90vh;
-    padding: 10rem 3rem;
-    overflow: hidden;
-  }
-
-  .container {
-    z-index: 1;
-    width: 30rem;
-    padding: 1rem;
-  }
-
-  .developers {
-    width: 12rem;
-  }
-
-  .businesses {
-    width: 12rem;
-  }
-
-  button {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
-  }
-}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
   .particles {
-    width: 17rem;
+    width: 20rem;
     height: 15rem;
   }
   .nav-list li a {
-    padding-left: 4.5rem;
+    padding-left: 5rem;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
   h3 {
     font-size: 1.5rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   li {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   header {
-    padding: 1rem 3rem;
+    padding: 1.3rem 3rem;
   }
 
   header.nav {
-    background-color: rgba(0, 0, 0, 0.15);
     padding: 1rem 3.3rem;
   }
 
@@ -475,7 +292,17 @@ button:active {
   }
 
   button {
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
   }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 650px) {
 }

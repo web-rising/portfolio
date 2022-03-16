@@ -255,10 +255,10 @@ button:active {
     font-size: 1.5rem;
   }
   p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
   li {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
   }
 
   header {
@@ -303,10 +303,10 @@ button:active {
 @media only screen and (max-width: 992px) {
   .particles {
     height: 15rem;
-    width: 17rem;
+    width: 18rem;
   }
   .nav-list li a {
-    padding-left: 5rem;
+    padding-left: 4.2rem;
   }
   h1 {
     font-size: 2rem;
@@ -315,7 +315,7 @@ button:active {
     font-size: 2.5rem;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   p {
     font-size: 1rem;
@@ -343,14 +343,10 @@ button:active {
 
   .container {
     z-index: 1;
-    width: 30rem;
+    width: 40rem;
     padding: 0 2rem;
     overflow: none;
   }
-
-  /* .divider {
-    flex-direction: column;
-  } */
 
   .developers {
     width: 14rem;
@@ -368,8 +364,134 @@ button:active {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+  .particles {
+    height: 15rem;
+    width: 18rem;
+  }
+  .nav-list {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1.2rem 3.5rem;
+  }
+
+  header.nav {
+    padding: 1.2rem 3.5rem;
+  }
+
+  .lorem,
+  .ipsum,
+  .amet,
+  .dolor,
+  .sit {
+    height: 90vh;
+    overflow: hidden;
+    padding: 0 4rem;
+  }
+
+  .container {
+    z-index: 1;
+    width: 35rem;
+    padding: 0 2rem;
+    overflow: none;
+  }
+
+  .divider {
+    flex-direction: column;
+  }
+
+  .developers {
+    width: 20rem;
+  }
+
+  .businesses {
+    width: 20rem;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
+  .particles {
+    position: absolute;
+    height: 17rem;
+    width: 17rem;
+  }
+  .nav-list {
+    display: none;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  header.nav {
+    padding: 1rem 2rem;
+  }
+
+  .lorem,
+  .ipsum,
+  .amet,
+  .dolor,
+  .sit {
+    height: 90vh;
+    overflow: hidden;
+    padding: 0 2rem;
+  }
+
+  .container {
+    z-index: 1;
+    width: 30rem;
+    padding: 0 2rem;
+    overflow: none;
+  }
+
+  .developers {
+    width: 20rem;
+  }
+
+  .businesses {
+    width: 20rem;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }

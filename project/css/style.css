@@ -28,7 +28,7 @@ h2 {
   font-size: 3rem;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 h4 {
   font-size: 1.6rem;
@@ -135,7 +135,7 @@ header li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem 5rem;
+  padding: 0 3rem;
   width: 50rem;
 }
 
@@ -165,6 +165,7 @@ header li a {
   justify-content: center;
   align-items: center;
   width: 20rem;
+  padding: 1rem;
 }
 
 .businesses {
@@ -173,6 +174,7 @@ header li a {
   justify-content: center;
   align-items: center;
   width: 20rem;
+  padding: 1rem;
 }
 
 h3 {
@@ -237,8 +239,8 @@ button:active {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
   .particles {
+    height: 16rem;
     width: 20rem;
-    height: 15rem;
   }
   .nav-list li a {
     padding-left: 5rem;
@@ -260,11 +262,11 @@ button:active {
   }
 
   header {
-    padding: 1.3rem 3rem;
+    padding: 1.3rem 3.5rem;
   }
 
   header.nav {
-    padding: 1rem 3.3rem;
+    padding: 1rem 3.8rem;
   }
 
   .lorem,
@@ -272,23 +274,92 @@ button:active {
   .amet,
   .dolor,
   .sit {
-    height: 90vh;
-    padding: 10rem 3rem;
     overflow: hidden;
+    padding: 0 8rem;
+  }
+
+  .container {
+    z-index: 1;
+    width: 50rem;
+    padding: 0 2rem;
+  }
+
+  .developers {
+    width: 14rem;
+    padding: 0.5rem;
+  }
+
+  .businesses {
+    width: 14rem;
+    padding: 0.5rem;
+  }
+
+  button {
+    padding: 0.9rem 1.7rem;
+    font-size: 0.95rem;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .particles {
+    height: 15rem;
+    width: 18rem;
+  }
+  .nav-list li a {
+    padding-left: 5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1.3rem 3.5rem;
+  }
+
+  header.nav {
+    padding: 1rem 3.8rem;
+  }
+
+  .lorem,
+  .ipsum,
+  .amet,
+  .dolor,
+  .sit {
+    overflow: hidden;
+    padding: 0 5rem;
   }
 
   .container {
     z-index: 1;
     width: 30rem;
-    padding: 1rem;
+    padding: 0 2rem;
+    overflow: none;
   }
+
+  /* .divider {
+    flex-direction: column;
+  } */
 
   .developers {
     width: 12rem;
+    padding: 0.5rem;
   }
 
   .businesses {
     width: 12rem;
+    padding: 0.5rem;
   }
 
   button {
@@ -296,9 +367,7 @@ button:active {
     font-size: 0.9rem;
   }
 }
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
 }

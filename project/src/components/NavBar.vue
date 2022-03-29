@@ -18,6 +18,21 @@
 export default {
   name: "NavBar",
   components: {},
+  methods: {
+    animation() {
+      const header = document.querySelector("header");
+      window.addEventListener("load", function () {
+        header.classList.remove("nav");
+      });
+
+      window.addEventListener("scroll", function () {
+        header.classList.toggle("nav", window.scrollY > 0);
+      });
+    },
+  },
+  created() {
+    this.animation();
+  },
 };
 </script>
 

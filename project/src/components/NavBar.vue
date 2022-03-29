@@ -1,13 +1,17 @@
 <template>
-  <div class="nav">
-    <h1><router-link to="/">WebRising</router-link></h1>
+  <head class="nav">
+    <h1 class="heady">
+      <router-link to="/" class="home">WebRising</router-link>
+    </h1>
     <ul class="nav-list">
-      <li><router-link to="/about">About Us</router-link></li>
-      <li><a href="#dolor">Dolor</a></li>
-      <li><a href="#sit">Sit</a></li>
-      <li><a href="#amet">Amet</a></li>
+      <li class="li">
+        <router-link to="/about" class="a">About Us</router-link>
+      </li>
+      <li class="li"><a href="#dolor" class="a">Dolor</a></li>
+      <li class="li"><a href="#sit" class="a">Sit</a></li>
+      <li class="li"><a href="#amet" class="a">Amet</a></li>
     </ul>
-  </div>
+  </head>
 </template>
 
 <script>
@@ -31,12 +35,13 @@ export default {
   transition: all 0.5s;
   z-index: 2;
 }
-header.nav .logo,
-header.nav li a {
+div.nav .logo,
+div.nav li a {
   color: #fff;
 }
-header .logo,
-header li a {
+
+div .logo,
+div li a {
   color: #151515;
   position: relative;
   text-decoration: none;
@@ -54,14 +59,32 @@ header li a {
   list-style: none;
 }
 .nav-list li a {
-  color: #151515;
+  color: white;
   position: relative;
   padding-left: 6rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s;
 }
+
 .nav-list li a:hover {
   color: #a1a1a1;
+}
+
+/* why is css so hard */
+.nav-list li a {
+  background-color: transparent;
+}
+
+div,
+ul,
+li {
+  background-color: transparent;
+}
+
+.home,
+.heady {
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
 }
 </style>

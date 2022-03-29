@@ -28,6 +28,8 @@ export default {
       window.addEventListener("scroll", function () {
         header.classList.toggle("nav", window.scrollY > 0);
       });
+
+      console.log("cum");
     },
   },
   created() {

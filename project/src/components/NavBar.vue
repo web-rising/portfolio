@@ -1,7 +1,9 @@
 <template>
   <head :class="{ nav: isActive }" id="nav">
     <h1 class="heady">
-      <router-link to="/" class="home">WebRising</router-link>
+      <router-link to="/" class="home" :class="{ afterHome: isActive }"
+        >WebRising</router-link
+      >
     </h1>
     <ul class="nav-list">
       <li class="li">
@@ -20,9 +22,6 @@ export default {
   components: {},
   created() {
     window.addEventListener("scroll", this.handleScroll);
-    window.onload = function () {
-      this.isLoad;
-    };
   },
 
   methods: {
@@ -46,6 +45,29 @@ export default {
 </script>
 
 <style scoped>
+.nav-list li a {
+  color: white;
+  position: relative;
+  padding-left: 6rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.nav-list li a {
+  color: black;
+}
+
+.home,
+.heady {
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  color: #151515;
+}
+
+.afterHome {
+  color: white;
+}
+
 head {
   position: fixed;
   top: 0;
@@ -55,17 +77,13 @@ head {
   align-items: center;
   justify-content: space-between;
   padding: 1.6rem 5rem;
-
   transition: all 0.5s;
   z-index: 1;
 }
+
 .nav {
   background-color: rgba(0, 0, 0, 0.15);
   padding: 1rem 6rem;
-}
-div.nav .logo,
-div.nav li a {
-  color: #fff;
 }
 
 div .logo,
@@ -86,14 +104,6 @@ div li a {
   position: relative;
   list-style: none;
 }
-.nav-list li a {
-  color: white;
-  position: relative;
-  padding-left: 6rem;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.5s;
-}
 
 .nav-list li a:hover {
   color: #a1a1a1;
@@ -108,11 +118,5 @@ div,
 ul,
 li {
   background-color: transparent;
-}
-
-.home,
-.heady {
-  background-color: rgba(0, 0, 0, 0);
-  text-decoration: none;
 }
 </style>

@@ -46,15 +46,15 @@ export default {
 
 <style scoped>
 .nav-list li a {
-  color: white;
   position: relative;
   padding-left: 6rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.5s;
 }
-.nav-list li a {
-  color: black;
+
+header li a {
+  color: white;
 }
 
 .home,

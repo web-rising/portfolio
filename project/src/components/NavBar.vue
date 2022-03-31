@@ -1,5 +1,5 @@
 <template>
-  <head class="nav">
+  <head :class="{ nav: isActive }" id="nav">
     <h1 class="heady">
       <router-link to="/" class="home">WebRising</router-link>
     </h1>
@@ -18,23 +18,7 @@
 export default {
   name: "NavBar",
   components: {},
-  methods: {
-    animation() {
-      const header = document.querySelector("header");
-      window.addEventListener("load", function () {
-        header.classList.remove("nav");
-      });
-
-      window.addEventListener("scroll", function () {
-        header.classList.toggle("nav", window.scrollY > 0);
-      });
-
-      console.log("cum");
-    },
-  },
-  created() {
-    this.animation();
-  },
+  methods: {},
 };
 </script>
 

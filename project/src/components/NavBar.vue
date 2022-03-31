@@ -18,7 +18,25 @@
 export default {
   name: "NavBar",
   components: {},
-  methods: {},
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+    window.onload = function () {
+      this.isLoad;
+    };
+  },
+
+  methods: {
+    handleScroll() {
+      if (window.scrollY > 0) {
+        this.isActive = true;
+      } else {
+        this.isActive = false;
+      }
+    },
+    isLoad() {
+      this.isActive = true;
+    },
+  },
   data() {
     return {
       isActive: false,
@@ -28,7 +46,7 @@ export default {
 </script>
 
 <style scoped>
-/* header {
+head {
   position: fixed;
   top: 0;
   left: 0;
@@ -37,23 +55,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 1.6rem 5rem;
-  transition: all 0.5s;
-  z-index: 1;
-}
 
-header.nav {
-  background-color: rgba(0, 0, 0, 0.15);
-  padding: 1rem 6rem;
-} */
-#nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.6rem 5rem;
   transition: all 0.5s;
   z-index: 1;
 }

@@ -3,7 +3,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #151515;
   color: #fff;
   /* min-height: 200vh; */
   scroll-behavior: smooth;
@@ -12,6 +11,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+body {
+  background-color: #151515;
 }
 
 h1 {

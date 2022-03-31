@@ -19,12 +19,16 @@ export default {
   name: "NavBar",
   components: {},
   methods: {},
+  data() {
+    return {
+      isActive: false,
+    };
+  },
 };
 </script>
 
 <style scoped>
-.nav {
-  background-color: rgba(0, 0, 0, 0.15);
+#nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,9 +36,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 4rem;
   transition: all 0.5s;
   z-index: 2;
+}
+.nav {
+  background-color: rgba(0, 0, 0, 0.15);
+
+  padding: 1.5rem 4rem;
 }
 div.nav .logo,
 div.nav li a {

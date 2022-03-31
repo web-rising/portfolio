@@ -28,6 +28,23 @@ export default {
 </script>
 
 <style scoped>
+/* header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 5rem;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+header.nav {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 1rem 6rem;
+} */
 #nav {
   position: fixed;
   top: 0;
@@ -36,13 +53,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1.6rem 5rem;
   transition: all 0.5s;
-  z-index: 2;
+  z-index: 1;
 }
 .nav {
   background-color: rgba(0, 0, 0, 0.15);
-
-  padding: 1.5rem 4rem;
+  padding: 1rem 6rem;
 }
 div.nav .logo,
 div.nav li a {

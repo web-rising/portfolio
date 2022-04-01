@@ -5,12 +5,12 @@
         <h2 id="h21">Built by high school developers — for you, for free</h2>
       </div>
       <!-- <div class="particles" id="tsparticles"></div> -->
-      <TSParticles/>
+      <!-- <TSParticles/> -->
     </section>
     <div class="spacer waves1"></div>
     <section id="ipsum" class="ipsum">
       <!-- <div class="particles" id="tsparticles2"></div> -->
-      <TSParticles/>
+      <!-- <TSParticles/> -->
       <div class="container" id="container2">
         <h2 id="h22">Don't limit your business's potential.</h2>
         <p id="p2">
@@ -28,12 +28,12 @@
         </p>
       </div>
       <!-- <div class="particles" id="tsparticles3"></div> -->
-      <TSParticles class='particles'/>
+      <!-- <TSParticles/> -->
     </section>
     <div class="spacer waves3"></div>
     <section id="sit" class="sit">
       <!-- <div class="particles" id="tsparticles4"></div> -->
-      <TSParticles/>
+      <!-- <TSParticles/> -->
       <div class="container" id="container4">
         <h2>Our work.</h2>
         <p>Check back here shortly for our projects.</p>
@@ -57,18 +57,19 @@
         </div>
       </div>
       <!-- <div class="particles" id="tsparticles5"></div> -->
-      <TSParticles/>
+      <!-- <TSParticles/> -->
+      <TSParticles />
     </section>
   </div>
 </template>
 
 <script>
 import Button from "./coolButton.vue";
-import TSParticles from './TSParticles.vue'
+import TSParticles from "./TSParticles.vue";
 export default {
   components: {
     Button,
-    TSParticles
+    TSParticles,
   },
   name: "HelloWorld",
 };

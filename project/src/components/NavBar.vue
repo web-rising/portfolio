@@ -6,12 +6,18 @@
       >
     </h1>
     <ul class="nav-list">
-      <li class="li">
-        <router-link to="/about" class="a">About Us</router-link>
+      <li :class="{ li: isActive }">
+        <router-link to="/about" :class="{ a: isActive }">About Us</router-link>
       </li>
-      <li class="li"><a href="#dolor" class="a">Dolor</a></li>
-      <li class="li"><a href="#sit" class="a">Sit</a></li>
-      <li class="li"><a href="#amet" class="a">Amet</a></li>
+      <li :class="{ li: isActive }">
+        <a href="#dolor" :class="{ a: isActive }">Dolor</a>
+      </li>
+      <li :class="{ li: isActive }">
+        <a href="#sit" :class="{ a: isActive }">Sit</a>
+      </li>
+      <li :class="{ li: isActive }">
+        <a href="#amet" :class="{ a: isActive }">Amet</a>
+      </li>
     </ul>
   </head>
 </template>
@@ -53,7 +59,7 @@ export default {
   transition: all 0.5s;
 }
 
-header li a {
+.nav-list .li .a {
   color: white;
 }
 

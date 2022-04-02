@@ -56,9 +56,10 @@
           </div>
         </div>
       </div>
+      <h1>hehe</h1>
       <!-- <div class="particles" id="tsparticles5"></div> -->
-      <!-- <TSParticles/> -->
-      <TSParticles />
+      <TSParticles class="test" />
+      <h1>uohwoievnoi</h1>
     </section>
   </div>
 </template>
@@ -77,6 +78,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.test {
+  width: 20rem;
+}
 .lorem,
 .ipsum,
 .dolor,

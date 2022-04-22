@@ -26,11 +26,10 @@ button {
 
 button:hover {
   cursor: pointer;
-  transform: scale(1.03);
   opacity: 0.75;
 }
 
 button:active {
-  transform: scale(1);
+  transform: scale(0.99);
 }
 </style>

@@ -2,6 +2,7 @@
   <div class="mission">
     <div class="container">
       <h2>Our mission.</h2>
+      <p>Work in progress...</p>
     </div>
     <div class='spacer waves1'></div>
   </div>
@@ -19,6 +20,7 @@ export default {
   background-color: #e4c7ff;
   color: #151515;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

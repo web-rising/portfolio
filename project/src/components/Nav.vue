@@ -13,10 +13,10 @@
         <router-link to="/team">Our Team</router-link>
       </li>
       <li>
-        <a href="#">Our Work</a>
+        <router-link to="/work">Our Work</router-link>
       </li>
       <li>
-        <a href="#">Contact Us</a>
+        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com">Contact Us</a>
       </li>
     </ul>
   </div>
@@ -80,7 +80,7 @@ export default {
 
 .sticky .nav-list li a:hover {
   text-decoration: underline;
-  /* color: #a1a1a1; */
+  opacity: 0.6;
 }
 
 .logo,
@@ -89,7 +89,7 @@ export default {
   position: relative;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .nav-list {
@@ -109,7 +109,7 @@ export default {
 
 .nav-list li a:hover {
   text-decoration: underline;
-  /* color: #a1a1a1; */
+  opacity: 0.6;
 }
 
 </style>

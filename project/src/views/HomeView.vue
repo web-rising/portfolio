@@ -2,17 +2,17 @@
   <div class='home'>
     <section class='lorem'>
       <div class='container'>
-        <h2>Built by high school developers — for you, for free.</h2>
+        <h2><span>Built by high school developers — </span><span>for you, for free.</span></h2>
       </div>
-       <Particles id='tsparticles' :options='this.particleOptions'/>
+       <!-- <Particles id='tsparticles' :options='this.particleOptions'/> -->
     </section>
     <div class='spacer waves1'></div>
     <section id='ipsum' class='ipsum'>
-       <Particles id='tsparticles' :options='this.particleOptions'/>
+       <!-- <Particles id='tsparticles' :options='this.particleOptions'/> -->
       <!-- <div class='particles' id='tsparticles2'></div> -->
       <!-- <TSParticles/> -->
       <div class='container'>
-        <h2>Don't limit your business's potential.</h2>
+        <h2>Don't limit your potential.</h2>
         <p>
           Our team has the resources and technical expertise to craft a
           streamlined platform.
@@ -27,11 +27,11 @@
           Showcase your products, market your business, and sell your services.
         </p>
       </div>
-      <Particles id='tsparticles' :options='this.particleOptions'/>
+      <!-- <Particles id='tsparticles' :options='this.particleOptions'/> -->
     </section>
     <div class='spacer waves3'></div>
     <section id='sit' class='sit'>
-      <Particles id='tsparticles' :options='this.particleOptions'/>
+      <!-- <Particles id='tsparticles' :options='this.particleOptions'/> -->
       <div class='container'>
         <h2>Our work.</h2>
         <p>Check back here shortly for our projects.</p>
@@ -40,8 +40,14 @@
     <div class='spacer waves4'></div>
     <section id='amet' class='amet'>
       <div class='container'>
-        <h2>Get involved.</h2>
-        <div class='divider'>
+        <!-- <div class="start">
+          <h2>Reach out to us to <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" class="contact">get started</a>.</h2>
+        </div> -->
+        <div class="start">
+          <h2>Get involved.</h2>
+          <p>Reach out to us to <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" class="contact">get started</a>.</p>
+        </div>
+        <!-- <div class='divider'>
           <div class='developers'>
             <h3>For Volunteers</h3>
             <p>Help us help your community.</p>
@@ -52,9 +58,9 @@
             <p>Reach out to us to get started.</p>
             <Button>Get Started</Button>
           </div>
-        </div>
+        </div> -->
       </div>
-    <Particles id='tsparticles' :options='this.particleOptions'/>
+    <!-- <Particles id='tsparticles' :options='this.particleOptions'/> -->
     </section>
     <div class='spacer waves5'></div>
   </div>
@@ -62,7 +68,7 @@
 
 <script>
 // @ is an alias to /src
-import Button from '@/components/Button.vue'
+// import Button from '@/components/Button.vue'
 
 export default {
   name: 'HomeView',
@@ -118,7 +124,7 @@ export default {
     }
   },
   components: {
-    Button,
+    // Button,
 },
 }
 </script>
@@ -200,6 +206,24 @@ export default {
 
 h3 {
   padding-bottom: 0.5rem;
+}
+
+.start {
+  transition: all 0.5s;
+}
+
+.start:hover .contact {
+text-decoration: underline;}
+
+.contact {
+  cursor: pointer;
+  color: #151515;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.contact:hover {
+  opacity: 0.7;
 }
 
 .spacer {

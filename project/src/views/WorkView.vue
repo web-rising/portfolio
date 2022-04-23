@@ -1,7 +1,7 @@
 <template>
   <div class="work">
     <div class="container">
-        <h2>Our Work.</h2>
+        <h2>Our work.</h2>
         <p>Check back here shortly for our projects.</p>
     </div>
     <div class='spacer waves5'></div>

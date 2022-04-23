@@ -1,7 +1,7 @@
 <template>
   <div class="mission">
     <div class="container">
-      <h2>Our Mission.</h2>
+      <h2>Our mission.</h2>
     </div>
     <div class='spacer waves1'></div>
   </div>

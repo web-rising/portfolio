@@ -2,7 +2,7 @@
   <div class="home">
     <section class="lorem">
       <div class="container">
-        <h2>Built by high school developers — for you, for free</h2>
+        <h2>Built by high school developers — for you, for free.</h2>
       </div>
       <!-- <div class="particles" id="tsparticles"></div> -->
       <!-- <TSParticles/> -->
@@ -69,8 +69,8 @@ import Button from '@/components/Button.vue'
 export default {
   name: 'HomeView',
   components: {
-    Button
-  }
+    Button,
+}
 }
 </script>
 

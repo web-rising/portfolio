@@ -2,8 +2,8 @@
     <div class="footer">
         <div class="container">
             <div class="links">
-                <h5 class="email">webrising@gmail.com</h5>
-                <a href="https://github.com/web-rising" class="git">
+                <h5 class="email">webrisingdev@gmail.com</h5>
+                <a href="https://github.com/web-rising" class="git" target="_blank">
                     <img src="../assets/gitmark.png" alt="" class="mark">
                     <img src="../assets/gitlogo.png" alt="" class="logo">
                 </a>

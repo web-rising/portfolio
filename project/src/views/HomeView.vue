@@ -4,8 +4,21 @@
       <div class="container">
         <h2>Built by high school developers — for you, for free.</h2>
       </div>
-      <!-- <div class="particles" id="tsparticles"></div> -->
-      <!-- <TSParticles/> -->
+      <vue-particles color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"></vue-particles>
     </section>
     <div class="spacer waves1"></div>
     <section id="ipsum" class="ipsum">
@@ -93,6 +106,12 @@ export default {
   justify-content: center;
   height: 85vh;
   padding: 0 10rem;
+}
+
+#particles-js {
+ height: 17rem;
+  width: 20rem;
+  overflow: hidden;
 }
 
 .container {

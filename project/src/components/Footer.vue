@@ -3,10 +3,7 @@
         <div class="container">
             <div class="links">
                 <h5 class="email">webrisingdev@gmail.com</h5>
-                <a href="https://github.com/web-rising" class="git" target="_blank">
-                    <img src="../assets/gitmark.png" alt="" class="mark">
-                    <img src="../assets/gitlogo.png" alt="" class="logo">
-                </a>
+                <GitButton/>
             </div>
             <ul class="nav-list">
                 <li>
@@ -28,8 +25,13 @@
 </template>
 
 <script>
+import GitButton from "./GitButton.vue"
+
 export default {
     name: "wowFooter",
+    components: {
+        GitButton
+    }
 }
 </script>
 
@@ -90,7 +92,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   margin-right: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 5.5rem;
 }
 
 .nav-list li {
@@ -102,6 +104,7 @@ export default {
 }
 
 .nav-list li a:hover {
-  color: #a1a1a1;
+    text-decoration: underline;
+    /* color: #a1a1a1; */
 }
 </style>

@@ -79,7 +79,8 @@ export default {
 }
 
 .sticky .nav-list li a:hover {
-  color: #a1a1a1;
+  text-decoration: underline;
+  /* color: #a1a1a1; */
 }
 
 .logo,
@@ -107,7 +108,8 @@ export default {
 }
 
 .nav-list li a:hover {
-  color: #a1a1a1;
+  text-decoration: underline;
+  /* color: #a1a1a1; */
 }
 
 </style>

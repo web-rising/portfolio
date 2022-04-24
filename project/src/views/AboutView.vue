@@ -23,7 +23,7 @@
             — we've got you covered. Our team has the resources and technical expertise to craft a streamlined platform.
           </p>
           <p>
-            Get in touch today to get started!
+            Let's craft something beautiful.
           </p>
         </div>
         </div>
@@ -39,7 +39,8 @@
             v-for="(member, index) in members"
             :key="index"
             :name="member.name"
-            :image="member.image"
+            :image1="member.image1"
+            :image2="member.image2"
             :position="member.position"
             :gitlink="member.git"
             :inlink="member.in"
@@ -62,7 +63,8 @@ export default {
        members: [
          {
            name: "Christopher Heo",
-           image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
+           image1: "heo1.jpg",
+           image2: "heo2.jpg",
            position: "Founder, CEO",
            git: "https://github.com/web-rising",
            in: "",

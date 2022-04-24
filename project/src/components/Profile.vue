@@ -1,6 +1,13 @@
 <template>
     <div class="profile">
-        <img :src="image" alt="" class="pic">
+        <div class="pic" v-if="!mobile" @mouseover="mouseOn" @mouseleave="mouseOff">
+             <img v-if="!hover" :src="require(`@/assets/profiles/${image1}`)" class="pic" alt="" id="pic1">
+             <img v-if="hover" :src="require(`@/assets/profiles/${image2}`)" class="pic" alt="" id="pic2">
+        </div>
+        <div class="pic" v-if="mobile" @click="mobileTouch">
+             <img v-if="!touched" :src="require(`@/assets/profiles/${image1}`)" class="pic" alt="" id="pic1">
+             <img v-if="touched" :src="require(`@/assets/profiles/${image2}`)" class="pic" alt="" id="pic2">
+        </div>
         <div class="container">
             <div class="person">
                 <h4>{{name}}</h4>
@@ -25,12 +32,36 @@
 
 export default {
     name: "TeamProfile",
-    components: {
-
+    data() {
+        return {
+            hover: false,
+            mobile: false,
+            touched: false
+        }
+    },
+    methods: {
+        mouseOn() {
+            setTimeout(() => {this.hover = true}, 200)
+        },
+        mouseOff() {
+            setTimeout(() => {this.hover = false}, 100)
+        },
+        mobileTouch() {
+            this.touched = !this.touched
+        },
+        isMobile(){
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                this.mobile = true
+            }
+        }
+    },
+    created: function() {
+        this.isMobile()
     },
     props: {
         name: String,
-        image: String,
+        image1: String,
+        image2: String,
         position: String,
         gitlink: String,
         inlink: String,
@@ -51,6 +82,7 @@ export default {
     width: 20rem;
     height: 25rem;
     object-fit: cover;
+    overflow: hidden;
     margin-bottom: 1rem;
 }
 

@@ -130,7 +130,7 @@ mounted() {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -141,7 +141,7 @@ mounted() {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   padding: 0 5rem;
   overflow: hidden;

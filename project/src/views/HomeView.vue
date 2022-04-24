@@ -10,19 +10,21 @@
       <p class="built">Built by high school developers — for you, for free.</p>
       </div>
     </section>
-    <section class="potential">
-      <div class="cool container">
+     <section class='work'>
+      <div class='container'>
+        <p>Check out more of our work.</p>
+      </div>
+    </section>
+    <section class="potential" id="trunk" ref="trunkRef">
+      <div class="container">
         <h2>Don't limit your business's potential.</h2>
         <p>
           Our team has the resources and technical expertise to craft a
           streamlined platform.
         </p>  
       </div>
-      <div class='wow container'>
-        <h2>Tailored for your needs.</h2>
-        <p>
-          Showcase your products, market your business, or sell your services.
-        </p>
+      <div class="container">
+        
       </div>
     </section>
     <!-- <section class='tailored'>

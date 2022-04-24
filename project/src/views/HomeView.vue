@@ -1,7 +1,7 @@
 <template>
   <div class='home'>
-    <div id='vanta' ref='vantaRef'>
-  </div>
+    <div id='birds' ref='birdsVantaRef'></div>
+    <div id='dots' ref='dotsVantaRef'></div>
     <!-- <VVanta id="vanta" effect="net" :options="this.options"></VVanta> -->
     <section class='lorem'>
       <div class='container'>
@@ -10,8 +10,6 @@
     </section>
     <div class='spacer waves1'></div>
     <section id='ipsum' class='ipsum'>
-      <!-- <div class='particles' id='tsparticles2'></div> -->
-      <!-- <TSParticles/> -->
       <div class='container'>
         <h2>Don't limit your business's potential.</h2>
         <p>
@@ -65,8 +63,9 @@
 </template>
 
 <script>
-import Button from '@/components/Button.vue'
 import BIRDS from 'vanta/src/vanta.birds'
+// import DOTS from 'vanta/src/vanta.dots'
+
 
 export default {
   name: 'HomeView',
@@ -75,9 +74,9 @@ export default {
 },
 mounted() {
   this.vantaEffect = BIRDS({
-    el: this.$refs.vantaRef,
-  mouseControls: true,
-  touchControls: true,
+    el: this.$refs.birdsVantaRef,
+  mouseControls: false,
+  touchControls: false,
   gyroControls: false,
   minHeight: 200.00,
   minWidth: 200.00,
@@ -89,8 +88,20 @@ mounted() {
   birdSize: 1.50,
   wingSpan: 20.00,
   speedLimit: 3.00,
-  quantity: 3.00
+  quantity: 4.00
   })
+  // this.vantaEffect = DOTS({
+  //   el: this.$refs.dotsVantaRef,
+  //  mouseControls: true,
+  // touchControls: true,
+  // gyroControls: false,
+  // minHeight: 200.00,
+  // minWidth: 200.00,
+  // scale: 1.00,
+  // scaleMobile: 1.00,
+  // color: 0xfa3e7e,
+  // backgroundColor: 0x160e28
+  // })
 },
   data() {
     return {
@@ -101,7 +112,7 @@ mounted() {
 
 <style scoped>
 
-#vanta{
+#birds, #dots{
   height: 50rem;
   width: 100%;
   overflow: hidden;

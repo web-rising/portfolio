@@ -15,6 +15,11 @@ export default {
     Nav,
     Footer,
   },
+  mounted() {
+    window.onbeforeunload = () => {
+      window.scrollTo(0, 0);
+    };
+  },
 }
 </script>
 

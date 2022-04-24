@@ -82,7 +82,7 @@ export default {
 
 .logo,
 .nav-list li a {
-  color: #151515;
+  color: #fff;
   position: relative;
   text-decoration: none;
   cursor: pointer;

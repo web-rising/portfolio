@@ -3,7 +3,9 @@
         <div class="container">
             <div class="links">
                 <h5 class="email">webrisingdev@gmail.com</h5>
-                <GitBtn href="https://github.com/web-rising"/>
+                <a class="git" href="https://github.com/web-rising" target="_blank">
+                    <img src="../assets/github.svg" alt="">
+                </a>
             </div>
             <ul class="nav-list">
                 <li>
@@ -22,12 +24,11 @@
 </template>
 
 <script>
-import GitBtn from "./GitBtn.vue"
 
 export default {
     name: "wowFooter",
     components: {
-        GitBtn
+        
     }
 }
 </script>
@@ -85,6 +86,11 @@ export default {
 }
 
 .git {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.5rem;
+    height: 2rem;
     margin-left: 2rem;
     margin-top: 0.5rem;
     margin-bottom: 2.5rem;

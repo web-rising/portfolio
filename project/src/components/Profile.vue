@@ -1,29 +1,39 @@
 <template>
     <div class="profile">
         <img :src="image" alt="" class="pic">
-        <h4>{{name}}</h4>
-        <p>{{position}}</p>
-        <div class="links">
-            <GitBtn/>
-            <LinkedinBtn/>
+        <div class="container">
+            <div class="person">
+                <h4>{{name}}</h4>
+                <p>{{position}}</p>
+            </div>
+            <div class="links">
+                <a class="gitmark" :href="gitlink" target="_blank">
+                    <img src="../assets/gitmark.png" alt="">
+                </a>
+                <a class="inmark" :href="inlink" target="_blank">
+                    <img src="../assets/inmark.png" alt="">
+                </a>
+                <a class="gmail" :href="maillink" target="_blank">
+                    <img src="../assets/gmail.png" alt="">
+                </a>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-import GitBtn from "./GitBtn.vue"
-import LinkedinBtn from "./LinkedinBtn.vue"
 
 export default {
     name: "TeamProfile",
     components: {
-        GitBtn,
-        LinkedinBtn
+
     },
     props: {
         name: String,
         image: String,
-        position: String
+        position: String,
+        gitlink: String,
+        inlink: String,
     }
 }
 </script>
@@ -31,9 +41,8 @@ export default {
 <style scoped>
 .profile {
     width: 20rem;
-    height: 33rem;
+    height: 34rem;
     margin: 2rem 3rem;
-    background-color: #151515;
     color: #fff;
     overflow: hidden;
 }
@@ -45,29 +54,56 @@ export default {
     margin-bottom: 1rem;
 }
 
+/* .container {
+    display: flex;
+    align-items: initial;
+    justify-content: space-between;
+} */
+
 .links {
     display: flex;
     flex-direction: row;
     align-items: inherit;
     justify-content: inherit;
-    padding: 0.5rem 0;
+    padding-top: 1rem;
 }
 
-.git {
-    width: 5.5rem;
+.gitmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
     margin-right: 2rem;
 }
 
-.linked {
-    width: 5.8rem;
+.inmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+
+.gmail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
 }
 
 h4 {
-    padding: 0.4rem 0;
+    /* padding-top: 0.5rem; */
     font-size: 1.4rem;
 }
 
 p {
+    padding-top: 0.5rem;
     font-size: 1.1rem;
 }
 </style>

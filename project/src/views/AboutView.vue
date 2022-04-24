@@ -41,6 +41,8 @@
             :name="member.name"
             :image="member.image"
             :position="member.position"
+            :gitlink="member.git"
+            :inlink="member.in"
           />
         </div>
       </section>
@@ -64,28 +66,35 @@ export default {
            image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
            position: "Founder, CEO",
            git: "https://github.com/web-rising",
-           linked: "",
+           in: "",
          },
          {
            name: "Jason Chen",
            image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
            position: "Co-founder, Creative Director",
            git: "https://github.com/web-rising",
-           linked: "",
+           in: "",
          },
          {
            name: "Michael Chen",
            image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
            position: "Lead Developer",
            git: "https://github.com/web-rising",
-           linked: "",
+           in: "",
          },
          {
-           name: "Jason Chen",
+           name: "Michael Frid",
            image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
-           position: "Co-founder, Creative Director",
+           position: "Lead Developer",
            git: "https://github.com/web-rising",
-           linked: "",
+           in: "",
+         },
+         {
+           name: "Johnson Wang",
+           image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
+           position: "Developer",
+           git: "https://github.com/web-rising",
+           in: "",
          },
        ]
      }
@@ -95,8 +104,9 @@ export default {
 
 <style scoped>
 .container {
-  background-color: #e4c7ff;
-  color: #151515;
+  /* background-color: #e4c7ff; */
+  background-color: #151515;
+  color: #fff;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -143,12 +153,11 @@ export default {
   margin-top: 4rem;
   min-height: 70vh;
   width: 100%;
-  background-color: #151515;
-  color: #fff;
 }
 
 .teaminfo {
   margin-left: 9rem;
+  padding-bottom: 2rem;
 }
 .profiles {
   margin-top: 1rem;

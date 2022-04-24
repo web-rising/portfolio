@@ -1,14 +1,15 @@
 <template>
   <div class='home'>
+    <div id='vanta' ref='vantaRef'>
+  </div>
+    <!-- <VVanta id="vanta" effect="net" :options="this.options"></VVanta> -->
     <section class='lorem'>
       <div class='container'>
         <h2>Built by high school developers — for you, for free.</h2>
       </div>
-       <Particles id='tsparticles' :options='this.particleOptions'/>
     </section>
     <div class='spacer waves1'></div>
     <section id='ipsum' class='ipsum'>
-       <Particles id='tsparticles' :options='this.particleOptions'/>
       <!-- <div class='particles' id='tsparticles2'></div> -->
       <!-- <TSParticles/> -->
       <div class='container'>
@@ -27,11 +28,9 @@
           Showcase your products, market your business, and sell your services.
         </p>
       </div>
-      <Particles id='tsparticles' :options='this.particleOptions'/>
     </section>
     <div class='spacer waves3'></div>
     <section id='sit' class='sit'>
-      <Particles id='tsparticles' :options='this.particleOptions'/>
       <div class='container'>
         <h2>Our work.</h2>
         <p>Check back here shortly for our projects.</p>
@@ -54,81 +53,56 @@
           </div>
         </div>
       </div>
-    <Particles id='tsparticles' :options='this.particleOptions'/>
     </section>
     <div class='spacer waves5'></div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Button from '@/components/Button.vue'
+import BIRDS from 'vanta/src/vanta.birds'
 
 export default {
   name: 'HomeView',
-  data() {
-    return {
-      particleOptions: {
-
-  fpsLimit: 120,
-  particles: {
-    number: {
-      value: 3,
-    },
-    color: {
-      value: [
-        '#F54900',
-        '#F56416',
-        '#FF8811',
-        '#FFF8F0',
-        '#9DD9D2',
-        '#84AFB4',
-        '#525A78',
-        '#464569',
-        '#392F5A',
-        '#8F95D3',
-        '#58504A',
-      ],
-    },
-    shape: {
-      type: 'circle',
-    },
-    opacity: {
-      value: 0.5,
-    },
-    size: {
-      value: 60,
-      random: {
-        enable: !0,
-        minimumValue: 100,
-      },
-    },
-    move: {
-      enable: !0,
-      speed: 1.7,
-      direction: 'top',
-      outMode: 'bounce',
-    },
-  },
-  detectRetina: !0,
-  fullScreen: {
-    enable: false,
-  }
-      }
-    }
-  },
   components: {
     Button,
 },
+mounted() {
+  this.vantaEffect = BIRDS({
+    el: this.$refs.vantaRef,
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x92141,
+  color1: 0xb11e1e,
+  color2: 0x217c91,
+  birdSize: 1.50,
+  wingSpan: 20.00,
+  speedLimit: 3.00,
+  quantity: 3.00
+  })
+},
+  data() {
+    return {
+    }
+  }
 }
 </script>
 
 <style scoped>
 
-#tsparticles {
-  height: 17rem;
-  width: 20rem;
+#vanta{
+  height: 50rem;
+  width: 100%;
   overflow: hidden;
+}
+
+canvas {
+  font-size: large;
 }
 
 .home {

@@ -1,24 +1,23 @@
 <template>
-  <div class="team">
+  <div class="work">
     <div class="container">
-      <h2>Our team.</h2>
-      <p>Work in progress...</p>
-
+        <h2>Our work.</h2>
+        <p>A showcase of our most recent projects.</p>
     </div>
-    <div class='spacer waves3'></div>
+    <div class='spacer waves5'></div>
   </div>
 </template>
 
 <script>
 export default {
-   name: "TeamView",
+   name: "WorkView",
 }
 </script>
 
 <style scoped>
 .container {
   height: 85vh;
-  background-color: #c7eeff;
+  background-color: #ffbdbd;
   color: #151515;
   display: flex;
   flex-direction: column;
@@ -34,7 +33,7 @@ export default {
   background-size: cover;
 }
 
-.waves3 {
-  background-image: url('../assets/waves3.svg');
+.waves5 {
+  background-image: url('../assets/waves5.svg');
 }
 </style>

@@ -11,22 +11,16 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/mission",
-    name: "mission",
+    path: "/about",
+    name: "about",
     component: () =>
-      import(/* webpackChunkName: "mission" */ "../views/MissionView.vue"),
+      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/team",
-    name: "team",
+    path: "/gallery",
+    name: "gallery",
     component: () =>
-      import(/* webpackChunkName: "team" */ "../views/TeamView.vue"),
-  },
-  {
-    path: "/work",
-    name: "work",
-    component: () =>
-      import(/* webpackChunkName: "work" */ "../views/WorkView.vue"),
+      import(/* webpackChunkName: "gallery" */ "../views/GalleryView.vue"),
   },
 ];
 

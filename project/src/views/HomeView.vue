@@ -12,7 +12,7 @@
       <!-- <div class='particles' id='tsparticles2'></div> -->
       <!-- <TSParticles/> -->
       <div class='container'>
-        <h2>Don't limit your potential.</h2>
+        <h2>Don't limit your business's potential.</h2>
         <p>
           Our team has the resources and technical expertise to craft a
           streamlined platform.
@@ -45,7 +45,7 @@
         </div> -->
         <div class="start">
           <h2>Get involved.</h2>
-          <p>Reach out to us to <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" class="contact">get started</a>.</p>
+          <p>Reach out to us to <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" target="_blank" class="contact">get started</a>.</p>
         </div>
         <!-- <div class='divider'>
           <div class='developers'>

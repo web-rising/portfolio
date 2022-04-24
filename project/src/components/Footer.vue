@@ -3,20 +3,17 @@
         <div class="container">
             <div class="links">
                 <h5 class="email">webrisingdev@gmail.com</h5>
-                <GitButton/>
+                <GitBtn href="https://github.com/web-rising"/>
             </div>
             <ul class="nav-list">
                 <li>
-                    <router-link to="/mission">Our Mission</router-link>
+                    <router-link to="/about">About Us</router-link>
                 </li>
                 <li>
-                    <router-link to="/team">Our Team</router-link>
+                    <router-link to="/gallery">Our Work</router-link>                
                 </li>
                 <li>
-                    <router-link to="/work">Our Work</router-link>                
-                </li>
-                <li>
-                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com">Contact Us</a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" target="_blank">Contact Us</a>
                 </li>
             </ul>
             </div>
@@ -25,12 +22,12 @@
 </template>
 
 <script>
-import GitButton from "./GitButton.vue"
+import GitBtn from "./GitBtn.vue"
 
 export default {
     name: "wowFooter",
     components: {
-        GitButton
+        GitBtn
     }
 }
 </script>
@@ -79,11 +76,17 @@ export default {
 }
 
 .nav-list li a {
-  margin-left: 4rem;
+  margin-left: 5rem;
 }
 
 .nav-list li a:hover {
     text-decoration: underline;
     opacity: 0.6;
+}
+
+.git {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
 }
 </style>

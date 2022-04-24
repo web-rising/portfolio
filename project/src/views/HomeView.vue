@@ -22,8 +22,8 @@
         <p>Check out more of our work.</p>
       </div>
     </section>
-    <section class="potential" id="trunk" ref="trunkRef">
-      <div class="potential-container">
+    <section class="trunk" id="trunk" ref="trunkRef">
+      <div class="cool container">
         <h2>Don't limit your business's potential.</h2>
         <p>
           Our team has the resources and technical expertise to craft a
@@ -83,9 +83,9 @@ export default {
 mounted() {
   gsap.timeline({ defaults: { duration: 1 } })
     .from(".splash", {opacity:0, ease:"power3.in"}, 0)
-    .from(".hello", { y:-50, opacity:0, ease: "power2.out"}, 0.5)
-    .to(".hello", { y: 50, opacity: 0, ease: "power1.out" }, 3)
-    .from(".weare", {y:-50, opacity: 0, ease: "power1.out"}, 4)
+    .from(".hello", { y:-30, opacity:0, ease: "power2.out"}, 0.5)
+    .to(".hello", { y: 30, opacity: 0, ease: "power2.out" }, 3)
+    .from(".weare", {y:-30, opacity: 0, ease: "power2.out"}, 4)
     .from(".built", {y:-20, opacity: 0, ease: "power2.out"}, 5)
 
   // gsap.timeline({
@@ -95,25 +95,25 @@ mounted() {
   //     },
   //   })
   //   .to(".hello", { y: -50, opacity: 0 }, 0)
-  gsap.set(".wow", {opacity: 0})
-  gsap.to(".cool", {
-    scrollTrigger: {
-      trigger: ".cool",
-      start: "top center",
-      scrub:1
-    },
-    y: -10,
-    opacity: 0
-  }, 0)
-  gsap.to(".wow", {
-    scrollTrigger: {
-      trigger: ".cool",
-      start: "top center",
-      scrub:1
-    },
-    y: 250,
-    opacity: 1
-  }, 3)
+  // gsap.set(".wow", {opacity: 0, y:-10})
+  // gsap.to(".cool", {
+  //   scrollTrigger: {
+  //     trigger: ".cool",
+  //     start: "top center",
+  //     scrub:1
+  //   },
+  //   y: -10,
+  //   opacity: 0
+  // }, 0)
+  // gsap.to(".wow", {
+  //   scrollTrigger: {
+  //     trigger: ".cool",
+  //     start: "top center",
+  //     scrub:1
+  //   },
+  //   y: 10,
+  //   opacity: 1
+  // }, 3)
 
   this.vantaEffect = BIRDS({
     el: this.$refs.birdsRef,
@@ -162,14 +162,10 @@ mounted() {
 </script>
 
 <style scoped>
-* {
-  overflow: hidden
-}
-
-.scroll {
+/* .scroll {
   position: absolute;
   height: 200vh
-}
+} */
 
 .splash {
   height: 100vh;
@@ -189,10 +185,9 @@ mounted() {
   font-size: 5rem;
 }
 
-.potential {
+.trunk {
   height: 100vh;
   width: 100%;
-  /* margin-left: 25%; */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -200,10 +195,9 @@ mounted() {
   justify-content: center;
 }
 
-/* .potential-container {
-  margin-right: 25%;
-} */
-
+.cool {
+  position: absolute;
+}
 .work {
   height: 50vh;
   width: 100%;
@@ -224,6 +218,7 @@ mounted() {
 }
 
 .container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -233,13 +228,13 @@ mounted() {
   width: 70%;
 }
 
-
 .start {
   transition: all 0.5s;
 }
 
 .start:hover .contact {
-text-decoration: underline;}
+  text-decoration: underline;
+}
 
 .contact {
   cursor: pointer;

@@ -1,14 +1,20 @@
 <template>
   <div class='home'>
-    <div id='vanta' ref='vantaRef'>
-  </div>
+    <section class="splash" id='birds' ref="birdRef">
+      <div class='container'>
+        <div class="splashtext">
+          <h2 class="hello">Hello.</h2>
+          <h2 class="weare">We are WebRising.</h2>
+        </div>
+      <p class="built">Built by high school developers — for you, for free.</p>
+      </div>
+    </section>
     <!-- <VVanta id="vanta" effect="net" :options="this.options"></VVanta> -->
     <section class='lorem'>
       <div class='container'>
         <h2><span>Built by high school developers — </span><span>for you, for free.</span></h2>
       </div>
     </section>
-    <div class='spacer waves1'></div>
     <section id='ipsum' class='ipsum'>
       <!-- <div class='particles' id='tsparticles2'></div> -->
       <!-- <TSParticles/> -->
@@ -20,7 +26,6 @@
         </p>
       </div>
     </section>
-    <div class='spacer waves2'></div>
     <section id='dolor' class='dolor'>
       <div class='container'>
         <h2>Tailored for your needs.</h2>
@@ -29,14 +34,12 @@
         </p>
       </div>
     </section>
-    <div class='spacer waves3'></div>
     <section id='sit' class='sit'>
       <div class='container'>
         <h2>Our work.</h2>
         <p>Check back here shortly for our projects.</p>
       </div>
     </section>
-    <div class='spacer waves4'></div>
     <section id='amet' class='amet'>
       <div class='container'>
         <!-- <div class="start">
@@ -50,47 +53,53 @@
           <div class='developers'>
             <h3>For Volunteers</h3>
             <p>Help us help your community.</p>
-            <Button>Contact Us</Button>
           </div>
           <div class='businesses'>
             <h3>For Businesses</h3>
             <p>Reach out to us to get started.</p>
-            <Button>Get Started</Button>
           </div>
         </div> -->
       </div>
     </section>
-    <div class='spacer waves5'></div>
   </div>
 </template>
 
 <script>
-import Button from '@/components/Button.vue'
 import BIRDS from 'vanta/src/vanta.birds'
+import gsap from "gsap"
+import ScrollTrigger from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default {
   name: 'HomeView',
   components: {
-    // Button,
 },
+
 mounted() {
+  gsap.timeline({ defaults: { duration: 1 } })
+    // .from("hello", { y:-50, opacity:0, ease: "power2.out"}, 1)
+    .to(".hello", { y: 50, opacity: 0, ease: "power1.out" }, 3)
+    .from(".weare", {y:-50, opacity: 0, ease: "power1.out"}, 4)
+    .from(".built", {y:-20, opacity: 0, ease: "power2.out"}, 5)
+
   this.vantaEffect = BIRDS({
-    el: this.$refs.vantaRef,
-  mouseControls: true,
-  touchControls: true,
+    el: this.$refs.birdRef,
+  mouseControls: false,
+  touchControls: false,
   gyroControls: false,
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  backgroundColor: 0x92141,
+  backgroundColor: 0x151515,
   color1: 0xb11e1e,
   color2: 0x217c91,
-  birdSize: 1.50,
+  birdSize: 1.20,
   wingSpan: 20.00,
-  speedLimit: 3.00,
-  quantity: 3.00
-  })
+  speedLimit: 4.00,
+  quantity: 4.00
+  });
 },
   data() {
     return {
@@ -100,21 +109,28 @@ mounted() {
 </script>
 
 <style scoped>
-
-#vanta{
-  height: 50rem;
+.splash {
+  height: 100vh;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 
-canvas {
-  font-size: large;
+.hello {
+  position: absolute;
 }
 
-.home {
-  background-color: #151515;
-  color: #fff;
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 0 5rem;
+  overflow: hidden;
+  /* width: 50rem; */
 }
 
 .lorem,
@@ -129,15 +145,6 @@ canvas {
   justify-content: center;
   height: 85vh;
   padding: 0 10rem;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 3rem;
-  width: 50rem;
 }
 
 .lorem {

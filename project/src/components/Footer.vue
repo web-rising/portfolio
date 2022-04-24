@@ -2,7 +2,7 @@
     <div class="footer">
         <div class="container">
             <div class="links">
-                <h5 class="email">webrisingdev@gmail.com</h5>
+                <h5 class="email">team@webrising.org</h5>
                 <a class="git" href="https://github.com/web-rising" target="_blank">
                     <img src="../assets/github.svg" alt="">
                 </a>
@@ -15,7 +15,7 @@
                     <router-link to="/gallery">Our Work</router-link>                
                 </li>
                 <li>
-                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" target="_blank">Contact Us</a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">Contact Us</a>
                 </li>
             </ul>
             </div>

@@ -2,7 +2,7 @@
   <div class="about">
     <div class="container">
       <section class="mission">
-        <h2>Our mission.</h2>
+        <h3>Our mission.</h3>
         <div class="info">
           <div class="grid">
           <p>
@@ -31,7 +31,7 @@
       <div class="graphic"></div>
       <section class="team">
         <div class="teaminfo">
-          <h2>Our team.</h2>
+          <h3>Our team.</h3>
           <p>Meet our dedicated team of designers, artists, and writers.</p>
         </div>
         <div class="profiles">
@@ -47,7 +47,6 @@
         </div>
       </section>
     </div>
-    <div class='spacer waves1'></div>
   </div>
 </template>
 
@@ -117,9 +116,9 @@ export default {
 .mission {
   /* display: flex;
   flex-direction: column;
-  align-items: initial;
+  align-items: start;
   justify-content: space-around; */
-  margin-top: 8rem;
+  margin-top: 9rem;
   height: 65vh;
   width: 55rem;
 }
@@ -127,20 +126,25 @@ export default {
 .info {
   display: flex;
   flex-direction: row;
-  align-items: initial;
+  align-items: start;
   justify-content: space-between;
 }
 
 .grid {
   display: flex;
   flex-direction: column;
-  align-items: initial;
-  justify-content: initial;
+  align-items: start;
+  justify-content: start;
   width: 25rem;
 }
 
 .grid p {
   padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.teaminfo p {
+  font-size: 1.3rem;
 }
 
 .graphic {
@@ -150,14 +154,14 @@ export default {
 }
 
 .team {
-  margin-top: 4rem;
+  margin-top: 2rem;
   min-height: 70vh;
   width: 100%;
 }
 
 .teaminfo {
   margin-left: 9rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .profiles {
   margin-top: 1rem;

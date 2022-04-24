@@ -13,13 +13,15 @@
         <router-link to="/gallery">Our Work</router-link>
       </li>
       <li>
-        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" target="_blank">Contact Us</a>
+        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">Contact Us</a>
       </li>
     </ul>
   </div>
 </template>
 
-<script scoped>
+<script>
+import gsap from "gsap"
+
 export default {
   name: "NavBar",
   components: {},
@@ -44,6 +46,10 @@ export default {
       isActive: false,
     };
   },
+  mounted () {
+    gsap.timeline({ defaults: { duration: 1 } })
+    .from(".nav", { y:-30, opacity: 0, ease: "power2.out" }, 1)
+  }
 };
 </script>
 
@@ -56,15 +62,15 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 5rem;
-  transition: all 0.5s;
+  padding: 1.2rem 5rem;
+  /* transition: all 0.5s; */
   z-index: 1;
 }
 
 .sticky {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
   /* background-color: rgba(0, 0, 0, 0.15); */
-  padding: 1rem 5rem;
+  padding: 1.2rem 5rem;
 }
 
 .sticky .logo {

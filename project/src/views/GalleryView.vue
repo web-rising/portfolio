@@ -1,10 +1,9 @@
 <template>
   <div class="work">
     <div class="container">
-        <h2>Our work.</h2>
+        <h3>Our work.</h3>
         <p>A showcase of our most recent projects.</p>
     </div>
-    <div class='spacer waves5'></div>
   </div>
 </template>
 
@@ -17,8 +16,8 @@ export default {
 <style scoped>
 .container {
   height: 85vh;
-  background-color: #ffbdbd;
-  color: #151515;
+  background-color: #151515;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;

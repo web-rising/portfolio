@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import gsap from "gsap"
+// import gsap from "gsap"
 
 export default {
   name: "NavBar",
@@ -47,8 +47,8 @@ export default {
     };
   },
   mounted () {
-    gsap.timeline({ defaults: { duration: 1 } })
-    .from(".nav", { y:-30, opacity: 0, ease: "power2.out" }, 1)
+    // gsap.timeline({ defaults: { duration: 1 } })
+    // .from(".nav", { y:-30, opacity: 0, ease: "power2.out" }, 1)
   }
 };
 </script>

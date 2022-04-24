@@ -1,5 +1,6 @@
 <template>
   <div class='home'>
+    <div class="scroll"></div>
     <section class="splash" id='birds' ref="birdRef">
       <div class='container'>
         <div class="splashtext">
@@ -9,38 +10,29 @@
       <p class="built">Built by high school developers — for you, for free.</p>
       </div>
     </section>
-    <!-- <VVanta id="vanta" effect="net" :options="this.options"></VVanta> -->
-    <section class='lorem'>
-      <div class='container'>
-        <h2><span>Built by high school developers — </span><span>for you, for free.</span></h2>
-      </div>
-    </section>
-    <section id='ipsum' class='ipsum'>
-      <!-- <div class='particles' id='tsparticles2'></div> -->
-      <!-- <TSParticles/> -->
-      <div class='container'>
+    <section class="potential">
+      <div class="container">
         <h2>Don't limit your business's potential.</h2>
         <p>
           Our team has the resources and technical expertise to craft a
           streamlined platform.
-        </p>
+        </p>  
       </div>
-    </section>
-    <section id='dolor' class='dolor'>
       <div class='container'>
         <h2>Tailored for your needs.</h2>
         <p>
-          Showcase your products, market your business, and sell your services.
+          Showcase your products, market your business, or sell your services.
         </p>
       </div>
     </section>
-    <section id='sit' class='sit'>
+    <!-- <section class='tailored'>
+    </section> -->
+    <section class='work'>
       <div class='container'>
-        <h2>Our work.</h2>
-        <p>Check back here shortly for our projects.</p>
+        <p>Check out more of our work.</p>
       </div>
     </section>
-    <section id='amet' class='amet'>
+    <section class='involve'>
       <div class='container'>
         <!-- <div class="start">
           <h2>Reach out to us to <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" class="contact">get started</a>.</h2>
@@ -83,6 +75,16 @@ mounted() {
     .from(".weare", {y:-50, opacity: 0, ease: "power1.out"}, 4)
     .from(".built", {y:-20, opacity: 0, ease: "power2.out"}, 5)
 
+  // gsap.timeline({
+  //   ScrollTrigger: {
+  //     trigger: ".scroll",
+  //     start: "top top",
+  //     end: "bottom bottom",
+  //     scrub: 1,
+  //     },
+  //   })
+  //   .fromTo(".splash", { y: 0 }, { y: -250 }, 0)
+
   this.vantaEffect = BIRDS({
     el: this.$refs.birdRef,
   mouseControls: false,
@@ -109,6 +111,11 @@ mounted() {
 </script>
 
 <style scoped>
+.scroll {
+  position: absolute;
+  height: 100%
+}
+
 .splash {
   height: 100vh;
   width: 100%;
@@ -123,14 +130,46 @@ mounted() {
   position: absolute;
 }
 
-.container {
+.splashtext h2 {
+  font-size: 5rem;
+}
+
+.potential {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+}
+.work {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.involve {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   padding: 0 5rem;
   overflow: hidden;
-  /* width: 50rem; */
+  width: 70%;
 }
 
 .lorem,
@@ -161,34 +200,6 @@ mounted() {
   color: #151515;
 }
 
-.divider {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.developers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 20rem;
-  padding: 1rem;
-}
-
-.businesses {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 20rem;
-  padding: 1rem;
-}
-
-h3 {
-  padding-bottom: 0.5rem;
-}
-
 .start {
   transition: all 0.5s;
 }
@@ -198,7 +209,7 @@ text-decoration: underline;}
 
 .contact {
   cursor: pointer;
-  color: #151515;
+  color: #fff;
   text-decoration: none;
   transition: all 0.3s;
 }

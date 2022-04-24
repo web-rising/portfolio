@@ -3,20 +3,19 @@
         <div class="container">
             <div class="links">
                 <h5 class="email">webrisingdev@gmail.com</h5>
-                <GitButton/>
+                <a class="git" href="https://github.com/web-rising" target="_blank">
+                    <img src="../assets/github.svg" alt="">
+                </a>
             </div>
             <ul class="nav-list">
                 <li>
-                    <router-link to="/mission">Our Mission</router-link>
+                    <router-link to="/about">About Us</router-link>
                 </li>
                 <li>
-                    <router-link to="/team">Our Team</router-link>
+                    <router-link to="/gallery">Our Work</router-link>                
                 </li>
                 <li>
-                    <a href="#">Our Work</a>
-                </li>
-                <li>
-                    <a href="#">Contact Us</a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com" target="_blank">Contact Us</a>
                 </li>
             </ul>
             </div>
@@ -25,12 +24,11 @@
 </template>
 
 <script>
-import GitButton from "./GitButton.vue"
 
 export default {
     name: "wowFooter",
     components: {
-        GitButton
+        
     }
 }
 </script>
@@ -48,33 +46,12 @@ export default {
     justify-content: space-between;
 }
 
-.git {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 8.5rem;
-    height: 2.5rem;
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 2.5rem;
-}
-
-.mark {
-    height: 1.6rem;
-    width: auto;
-}
-
-.logo {
-    height: 2rem;
-    width: auto;
-}
-
 .email {
-    padding: 0 2rem;
+    margin: 0 2rem;
 }
 
 .copyright {
-    padding: 0 2rem;
+    margin: 0 2rem;
     color: #a1a1a1;
 }
 
@@ -83,7 +60,7 @@ export default {
   position: relative;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .nav-list {
@@ -100,11 +77,22 @@ export default {
 }
 
 .nav-list li a {
-  margin-left: 4rem;
+  margin-left: 5rem;
 }
 
 .nav-list li a:hover {
     text-decoration: underline;
-    /* color: #a1a1a1; */
+    opacity: 0.6;
+}
+
+.git {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.5rem;
+    height: 2rem;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
 }
 </style>

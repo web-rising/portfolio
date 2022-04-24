@@ -1,7 +1,7 @@
 <template>
   <div class='home'>
     <div class="scroll"></div>
-    <section class="splash" id='birds' ref="birdRef">
+    <section class="splash" id='birds' ref="birdsRef">
       <div class='container'>
         <div class="splashtext">
           <h2 class="hello">Hello.</h2>
@@ -10,15 +10,20 @@
       <p class="built">Built by high school developers — for you, for free.</p>
       </div>
     </section>
-    <section class="potential">
-      <div class="container">
+     <section class='work'>
+      <div class='container'>
+        <p>Check out more of our work.</p>
+      </div>
+    </section>
+    <section class="potential" id="trunk" ref="trunkRef">
+      <div class="potential-container">
         <h2>Don't limit your business's potential.</h2>
         <p>
           Our team has the resources and technical expertise to craft a
           streamlined platform.
         </p>  
       </div>
-      <div class='container'>
+      <div class='potential-container'>
         <h2>Tailored for your needs.</h2>
         <p>
           Showcase your products, market your business, or sell your services.
@@ -27,11 +32,7 @@
     </section>
     <!-- <section class='tailored'>
     </section> -->
-    <section class='work'>
-      <div class='container'>
-        <p>Check out more of our work.</p>
-      </div>
-    </section>
+   
     <section class='involve'>
       <div class='container'>
         <!-- <div class="start">
@@ -58,7 +59,7 @@
 
 <script>
 import BIRDS from 'vanta/src/vanta.birds'
-// import DOTS from 'vanta/src/vanta.dots'
+import TRUNK from 'vanta/src/vanta.trunk'
 
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
@@ -88,7 +89,7 @@ mounted() {
   //   .fromTo(".splash", { y: 0 }, { y: -250 }, 0)
 
   this.vantaEffect = BIRDS({
-    el: this.$refs.birdRef,
+    el: this.$refs.birdsRef,
   mouseControls: false,
   touchControls: false,
   gyroControls: false,
@@ -104,18 +105,20 @@ mounted() {
   speedLimit: 3.00,
   quantity: 4.00
   })
-  // this.vantaEffect = DOTS({
-  //   el: this.$refs.dotsVantaRef,
-  //  mouseControls: true,
-  // touchControls: true,
-  // gyroControls: false,
-  // minHeight: 200.00,
-  // minWidth: 200.00,
-  // scale: 1.00,
-  // scaleMobile: 1.00,
-  // color: 0xfa3e7e,
-  // backgroundColor: 0x160e28
-  // })
+  this.vantaEffect = TRUNK({
+    el: this.$refs.trunkRef,
+   mouseControls: false,
+  touchControls: false,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x96455e,
+  backgroundColor: 0x151515,
+  spacing: 1.50,
+  chaos: 2.00
+  })
 },
   data() {
     return {
@@ -125,6 +128,10 @@ mounted() {
 </script>
 
 <style scoped>
+* {
+  overflow: hidden
+}
+
 .scroll {
   position: absolute;
   height: 100%
@@ -151,14 +158,20 @@ mounted() {
 .potential {
   height: 100vh;
   width: 100%;
+  /* margin-left: 25%; */
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
+
+/* .potential-container {
+  margin-right: 25%;
+} */
+
 .work {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -259,9 +272,4 @@ text-decoration: underline;}
 .waves5 {
   background-image: url('../assets/waves5.svg');
 }
-/* .particles {
-  height: 17rem;
-  width: 20rem;
-  overflow: hidden;
-} */
 </style>

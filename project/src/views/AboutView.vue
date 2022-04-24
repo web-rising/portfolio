@@ -28,7 +28,7 @@
         </div>
         </div>
       </section>
-      <div class="graphic"></div>
+      <section class="net" id="net" ref="netRef"></section>
       <section class="team">
         <div class="teaminfo">
           <h3>Our team.</h3>
@@ -53,10 +53,26 @@
 
 <script>
 import Profile from "../components/Profile.vue"
+import NET from 'vanta/src/vanta.net'
+
 export default {
    name: "MissionView",
    components: {
      Profile,
+   },
+   mounted() {
+     this.vantaEffect = NET({
+    el: this.$refs.netRef,
+   mouseControls: false,
+  touchControls: false,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 400.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x96455e,
+  backgroundColor: 0x151515,
+  })
    },
    data() {
      return {
@@ -121,7 +137,7 @@ export default {
   align-items: start;
   justify-content: space-around; */
   margin-top: 9rem;
-  height: 65vh;
+  height: 45vh;
   width: 55rem;
 }
 
@@ -149,9 +165,9 @@ export default {
   font-size: 1.3rem;
 }
 
-.graphic {
+.net {
   background-color: #151515;
-  height: 60vh;
+  height: 40vh;
   width: 100%;
 }
 

@@ -11,14 +11,14 @@
       </div>
     </section>
     <section class="potential">
-      <div class="container">
+      <div class="cool container">
         <h2>Don't limit your business's potential.</h2>
         <p>
           Our team has the resources and technical expertise to craft a
           streamlined platform.
         </p>  
       </div>
-      <div class='container'>
+      <div class='wow container'>
         <h2>Tailored for your needs.</h2>
         <p>
           Showcase your products, market your business, or sell your services.
@@ -63,6 +63,8 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
+console.log(ScrollTrigger)
+
 export default {
   name: 'HomeView',
   components: {
@@ -70,20 +72,38 @@ export default {
 
 mounted() {
   gsap.timeline({ defaults: { duration: 1 } })
-    // .from("hello", { y:-50, opacity:0, ease: "power2.out"}, 1)
+    .from(".splash", {opacity:0, ease:"power3.in"}, 0)
+    .from(".hello", { y:-50, opacity:0, ease: "power2.out"}, 0.5)
     .to(".hello", { y: 50, opacity: 0, ease: "power1.out" }, 3)
     .from(".weare", {y:-50, opacity: 0, ease: "power1.out"}, 4)
     .from(".built", {y:-20, opacity: 0, ease: "power2.out"}, 5)
 
   // gsap.timeline({
   //   ScrollTrigger: {
-  //     trigger: ".scroll",
-  //     start: "top top",
-  //     end: "bottom bottom",
+  //     trigger: ".splash",
   //     scrub: 1,
   //     },
   //   })
-  //   .fromTo(".splash", { y: 0 }, { y: -250 }, 0)
+  //   .to(".hello", { y: -50, opacity: 0 }, 0)
+  gsap.set(".wow", {opacity: 0})
+  gsap.to(".cool", {
+    scrollTrigger: {
+      trigger: ".cool",
+      start: "top center",
+      scrub:1
+    },
+    y: -10,
+    opacity: 0
+  }, 0)
+  gsap.to(".wow", {
+    scrollTrigger: {
+      trigger: ".cool",
+      start: "top center",
+      scrub:1
+    },
+    y: 250,
+    opacity: 1
+  }, 3)
 
   this.vantaEffect = BIRDS({
     el: this.$refs.birdRef,
@@ -113,7 +133,7 @@ mounted() {
 <style scoped>
 .scroll {
   position: absolute;
-  height: 100%
+  height: 200vh
 }
 
 .splash {
@@ -142,6 +162,10 @@ mounted() {
   flex-direction: column;
   align-items: start;
   justify-content: center;
+}
+
+.cool {
+  position: absolute;
 }
 .work {
   height: 100vh;
@@ -172,33 +196,6 @@ mounted() {
   width: 70%;
 }
 
-.lorem,
-.ipsum,
-.dolor,
-.sit,
-.amet {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 85vh;
-  padding: 0 10rem;
-}
-
-.lorem {
-  background-color: #e4c7ff;
-  color: #151515;
-}
-
-.dolor {
-  background-color: #c7eeff;
-  color: #151515;
-}
-.amet {
-  background-color: #ffbdbd;
-  color: #151515;
-}
 
 .start {
   transition: all 0.5s;
@@ -217,37 +214,4 @@ text-decoration: underline;}
 .contact:hover {
   opacity: 0.7;
 }
-
-.spacer {
-  aspect-ratio: 960/250;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.waves1 {
-  background-image: url('../assets/waves1.svg');
-}
-
-.waves2 {
-  background-image: url('../assets/waves2.svg');
-}
-
-.waves3 {
-  background-image: url('../assets/waves3.svg');
-}
-
-.waves4 {
-  background-image: url('../assets/waves4.svg');
-}
-
-.waves5 {
-  background-image: url('../assets/waves5.svg');
-}
-/* .particles {
-  height: 17rem;
-  width: 20rem;
-  overflow: hidden;
-} */
 </style>

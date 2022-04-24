@@ -68,7 +68,7 @@ export default {
   gyroControls: false,
   minHeight: 200.00,
   minWidth: 400.00,
-  scale: 1.00,
+  scale: 3.00,
   scaleMobile: 1.00,
   color: 0x96455e,
   backgroundColor: 0x151515,

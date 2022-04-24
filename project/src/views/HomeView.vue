@@ -12,6 +12,13 @@
     </section>
      <section class='work'>
       <div class='container'>
+        <Client
+       v-for="(client, index) in clients"
+            :key="index"
+            :image="client.image"
+            :name="client.name"
+            :description="client.description"
+        />
         <p>Check out more of our work.</p>
       </div>
     </section>
@@ -23,11 +30,13 @@
           streamlined platform.
         </p>  
       </div>
-      <div class='potential-container'>
+      <div class="potential-container">
+        <h2>Tailored to your needs.</h2>
         <p>
+          Showcase your products, market your business, or sell your services.
+        </p>  
+      </div>
     </section>
-    <!-- <section class='tailored'>
-    </section> -->
    
     <section class='involve'>
       <div class='container'>
@@ -56,6 +65,7 @@
 <script>
 import BIRDS from 'vanta/src/vanta.birds'
 import TRUNK from 'vanta/src/vanta.trunk'
+import Client from '@/components/Client.vue'
 
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
@@ -67,6 +77,7 @@ console.log(ScrollTrigger)
 export default {
   name: 'HomeView',
   components: {
+    Client
 },
 
 mounted() {
@@ -138,6 +149,13 @@ mounted() {
 },
   data() {
     return {
+      clients: [
+        {
+          image: "heo1.jpg",
+          name: "K-Spirit Taekwondo.",
+          description: "A Brooklyn Taekwondo studio."
+        }
+      ]
     }
   }
 }

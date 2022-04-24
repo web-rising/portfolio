@@ -94,5 +94,6 @@ export default {
     margin-left: 2rem;
     margin-top: 0.5rem;
     margin-bottom: 2.5rem;
+    overflow: hidden;
 }
 </style>

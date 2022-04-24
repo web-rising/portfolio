@@ -23,12 +23,12 @@
             — we've got you covered. Our team has the resources and technical expertise to craft a streamlined platform.
           </p>
           <p>
-            Get in touch today to get started!
+            Let's craft something beautiful.
           </p>
         </div>
         </div>
       </section>
-      <div class="graphic"></div>
+      <section class="net" id="net" ref="netRef"></section>
       <section class="team">
         <div class="teaminfo">
           <h3>Our team.</h3>
@@ -39,7 +39,8 @@
             v-for="(member, index) in members"
             :key="index"
             :name="member.name"
-            :image="member.image"
+            :image1="member.image1"
+            :image2="member.image2"
             :position="member.position"
             :gitlink="member.git"
             :inlink="member.in"
@@ -52,17 +53,34 @@
 
 <script>
 import Profile from "../components/Profile.vue"
+import NET from 'vanta/src/vanta.net'
+
 export default {
    name: "MissionView",
    components: {
      Profile,
+   },
+   mounted() {
+     this.vantaEffect = NET({
+    el: this.$refs.netRef,
+   mouseControls: false,
+  touchControls: false,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 400.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x96455e,
+  backgroundColor: 0x151515,
+  })
    },
    data() {
      return {
        members: [
          {
            name: "Christopher Heo",
-           image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
+           image1: "heo1.jpg",
+           image2: "heo2.jpg",
            position: "Founder, CEO",
            git: "https://github.com/web-rising",
            in: "",
@@ -119,7 +137,7 @@ export default {
   align-items: start;
   justify-content: space-around; */
   margin-top: 9rem;
-  height: 65vh;
+  height: 45vh;
   width: 55rem;
 }
 
@@ -147,9 +165,9 @@ export default {
   font-size: 1.3rem;
 }
 
-.graphic {
+.net {
   background-color: #151515;
-  height: 60vh;
+  height: 40vh;
   width: 100%;
 }
 

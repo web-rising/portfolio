@@ -1,7 +1,7 @@
 <template>
   <div class='home'>
     <div class="scroll"></div>
-    <section class="splash" id='birds' ref="birdRef">
+    <section class="splash" id='birds' ref="birdsRef">
       <div class='container'>
         <div class="splashtext">
           <h2 class="hello">Hello.</h2>
@@ -27,11 +27,7 @@
     </section>
     <!-- <section class='tailored'>
     </section> -->
-    <section class='work'>
-      <div class='container'>
-        <p>Check out more of our work.</p>
-      </div>
-    </section>
+   
     <section class='involve'>
       <div class='container'>
         <!-- <div class="start">
@@ -58,6 +54,8 @@
 
 <script>
 import BIRDS from 'vanta/src/vanta.birds'
+import TRUNK from 'vanta/src/vanta.trunk'
+
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 
@@ -106,7 +104,7 @@ mounted() {
   }, 3)
 
   this.vantaEffect = BIRDS({
-    el: this.$refs.birdRef,
+    el: this.$refs.birdsRef,
   mouseControls: false,
   touchControls: false,
   gyroControls: false,
@@ -119,9 +117,23 @@ mounted() {
   color2: 0x217c91,
   birdSize: 1.20,
   wingSpan: 20.00,
-  speedLimit: 4.00,
+  speedLimit: 3.00,
   quantity: 4.00
-  });
+  })
+  this.vantaEffect = TRUNK({
+    el: this.$refs.trunkRef,
+   mouseControls: false,
+  touchControls: false,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x96455e,
+  backgroundColor: 0x151515,
+  spacing: 1.50,
+  chaos: 2.00
+  })
 },
   data() {
     return {
@@ -131,6 +143,10 @@ mounted() {
 </script>
 
 <style scoped>
+* {
+  overflow: hidden
+}
+
 .scroll {
   position: absolute;
   height: 200vh
@@ -142,7 +158,7 @@ mounted() {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -157,10 +173,11 @@ mounted() {
 .potential {
   height: 100vh;
   width: 100%;
+  /* margin-left: 25%; */
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -168,7 +185,7 @@ mounted() {
   position: absolute;
 }
 .work {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   overflow: hidden;
   display: flex;

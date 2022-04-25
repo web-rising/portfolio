@@ -30,12 +30,12 @@
           streamlined platform.
         </p>  
       </div>
-      <div class="potential container">
+      <!-- <div class="potential container">
         <h2>Tailored to your needs.</h2>
         <p>
           Showcase your products, market your business, or sell your services.
         </p>  
-      </div>
+      </div> -->
     </section>
    
     <section class='involve'>
@@ -89,34 +89,34 @@ mounted() {
     .from(".weare", {y:-30, opacity: 0, ease: "power2.out"}, 4)
     .from(".built", {y:-20, opacity: 0, ease: "power2.out"}, 5)
 
-  gsap.timeline({
-    ScrollTrigger: {
-      trigger: ".splash",
-      start: "top top",
-      end: "bottom top",
-      scrub: 1,
-      },
-    })
-    .to(".hello", { y: -50, opacity: 0 }, 0)
-  gsap.set(".business", {opacity: 0, y:-10})
-  gsap.to(".potential", {
-    scrollTrigger: {
-      trigger: ".potential",
-      start: "top center",
-      scrub: 1
-    },
-    y: -10,
-    opacity: 0
-  }, 0)
-  gsap.to(".business", {
-    scrollTrigger: {
-      trigger: ".potential",
-      start: "top center",
-      scrub:1
-    },
-    y: 10,
-    opacity: 1
-  }, 3)
+  // gsap.timeline({
+  //   ScrollTrigger: {
+  //     trigger: ".splash",
+  //     start: "top top",
+  //     end: "bottom top",
+  //     scrub: 1,
+  //     },
+  //   })
+  //   .to(".hello", { y: -50, opacity: 0 }, 0)
+  // gsap.set(".business", {opacity: 0, y:-10})
+  // gsap.to(".potential", {
+  //   scrollTrigger: {
+  //     trigger: ".potential",
+  //     start: "top center",
+  //     scrub: 1
+  //   },
+  //   y: -10,
+  //   opacity: 0
+  // }, 0)
+  // gsap.to(".business", {
+  //   scrollTrigger: {
+  //     trigger: ".potential",
+  //     start: "top center",
+  //     scrub:1
+  //   },
+  //   y: 10,
+  //   opacity: 1
+  // }, 3)
 
   this.vantaEffect = BIRDS({
     el: this.$refs.birdsRef,
@@ -209,7 +209,7 @@ mounted() {
   justify-content: center;
 }
 .involve {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   overflow: hidden;
   display: flex;

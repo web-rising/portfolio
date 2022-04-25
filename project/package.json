@@ -10,10 +10,8 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "gsap": "^3.10.4",
-    "particles.vue": "^3.0.6",
     "vanta": "^0.5.22",
     "vue": "^2.6.14",
-    "vue-particles": "^1.0.9",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {

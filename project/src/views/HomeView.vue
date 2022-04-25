@@ -23,14 +23,14 @@
       </div>
     </section>
     <section class="net" id="net" ref="netRef">
-      <div class="cool container">
+      <div class="business container">
         <h2>Don't limit your business's potential.</h2>
         <p>
           Our team has the resources and technical expertise to craft a
           streamlined platform.
         </p>  
       </div>
-      <div class="potential-container">
+      <div class="potential container">
         <h2>Tailored to your needs.</h2>
         <p>
           Showcase your products, market your business, or sell your services.
@@ -78,7 +78,7 @@ console.log(ScrollTrigger)
 export default {
   name: 'HomeView',
   components: {
-    Client
+    Client,
 },
 
 mounted() {
@@ -89,32 +89,34 @@ mounted() {
     .from(".weare", {y:-30, opacity: 0, ease: "power2.out"}, 4)
     .from(".built", {y:-20, opacity: 0, ease: "power2.out"}, 5)
 
-  // gsap.timeline({
-  //   ScrollTrigger: {
-  //     trigger: ".splash",
-  //     scrub: 1,
-  //     },
-  //   })
-  //   .to(".hello", { y: -50, opacity: 0 }, 0)
-  // gsap.set(".wow", {opacity: 0, y:-10})
-  // gsap.to(".cool", {
-  //   scrollTrigger: {
-  //     trigger: ".cool",
-  //     start: "top center",
-  //     scrub:1
-  //   },
-  //   y: -10,
-  //   opacity: 0
-  // }, 0)
-  // gsap.to(".wow", {
-  //   scrollTrigger: {
-  //     trigger: ".cool",
-  //     start: "top center",
-  //     scrub:1
-  //   },
-  //   y: 10,
-  //   opacity: 1
-  // }, 3)
+  gsap.timeline({
+    ScrollTrigger: {
+      trigger: ".splash",
+      start: "top top",
+      end: "bottom top",
+      scrub: 1,
+      },
+    })
+    .to(".hello", { y: -50, opacity: 0 }, 0)
+  gsap.set(".business", {opacity: 0, y:-10})
+  gsap.to(".potential", {
+    scrollTrigger: {
+      trigger: ".potential",
+      start: "top center",
+      scrub: 1
+    },
+    y: -10,
+    opacity: 0
+  }, 0)
+  gsap.to(".business", {
+    scrollTrigger: {
+      trigger: ".potential",
+      start: "top center",
+      scrub:1
+    },
+    y: 10,
+    opacity: 1
+  }, 3)
 
   this.vantaEffect = BIRDS({
     el: this.$refs.birdsRef,
@@ -144,8 +146,6 @@ mounted() {
   scaleMobile: 1.00,
   color: 0x96455e,
   backgroundColor: 0x151515,
-  // spacing: 1.50,
-  // chaos: 2.00
   })
 },
   data() {
@@ -196,7 +196,7 @@ mounted() {
   justify-content: center;
 }
 
-.cool {
+.business {
   position: absolute;
 }
 .work {

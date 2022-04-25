@@ -22,7 +22,7 @@
         <p>Check out more of our work.</p>
       </div>
     </section>
-    <section class="trunk" id="trunk" ref="trunkRef">
+    <section class="net" id="net" ref="netRef">
       <div class="cool container">
         <h2>Don't limit your business's potential.</h2>
         <p>
@@ -64,7 +64,8 @@
 
 <script>
 import BIRDS from 'vanta/src/vanta.birds'
-import TRUNK from 'vanta/src/vanta.trunk'
+// import TRUNK from 'vanta/src/vanta.trunk'
+import NET from 'vanta/src/vanta.net'
 import Client from '@/components/Client.vue'
 
 import gsap from "gsap"
@@ -132,10 +133,10 @@ mounted() {
   speedLimit: 3.00,
   quantity: 4.00
   })
-  this.vantaEffect = TRUNK({
-    el: this.$refs.trunkRef,
-   mouseControls: false,
-  touchControls: false,
+  this.vantaEffect = NET({
+    el: this.$refs.netRef,
+   mouseControls: true,
+  touchControls: true,
   gyroControls: false,
   minHeight: 200.00,
   minWidth: 200.00,
@@ -143,8 +144,8 @@ mounted() {
   scaleMobile: 1.00,
   color: 0x96455e,
   backgroundColor: 0x151515,
-  spacing: 1.50,
-  chaos: 2.00
+  // spacing: 1.50,
+  // chaos: 2.00
   })
 },
   data() {
@@ -185,7 +186,7 @@ mounted() {
   font-size: 5rem;
 }
 
-.trunk {
+.net {
   height: 100vh;
   width: 100%;
   overflow: hidden;

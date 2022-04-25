@@ -28,7 +28,7 @@
         </div>
         </div>
       </section>
-      <section class="net" id="net" ref="netRef"></section>
+      <section class="trunk" id="trunk" ref="trunkRef"></section>
       <section class="team">
         <div class="teaminfo">
           <h3>Our team.</h3>
@@ -53,7 +53,8 @@
 
 <script>
 import Profile from "../components/Profile.vue"
-import NET from 'vanta/src/vanta.net'
+// import NET from 'vanta/src/vanta.net'
+import TRUNK from 'vanta/src/vanta.trunk'
 
 export default {
    name: "MissionView",
@@ -61,17 +62,19 @@ export default {
      Profile,
    },
    mounted() {
-     this.vantaEffect = NET({
-    el: this.$refs.netRef,
-   mouseControls: false,
-  touchControls: false,
+     this.vantaEffect = TRUNK({
+  el: this.$refs.trunkRef,
+   mouseControls: true,
+  touchControls: true,
   gyroControls: false,
   minHeight: 200.00,
-  minWidth: 400.00,
-  scale: 3.00,
+  minWidth: 200.00,
+  scale: 1.00,
   scaleMobile: 1.00,
   color: 0x96455e,
   backgroundColor: 0x151515,
+  spacing: 1.50,
+  chaos: 2.00
   })
    },
    data() {
@@ -165,9 +168,10 @@ export default {
   font-size: 1.3rem;
 }
 
-.net {
+.trunk {
   background-color: #151515;
-  height: 40vh;
+  height: 50vh;
+  margin-top: 10rem;
   width: 100%;
 }
 

@@ -194,7 +194,7 @@ mounted() {
 }
 
 .net {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   overflow: visible;
   display: flex;
@@ -208,7 +208,7 @@ mounted() {
 }
 
 .work {
-  min-height: 120vh;
+  min-height: 130vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -217,7 +217,7 @@ mounted() {
   justify-content: center;
 }
 .involve {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   overflow: hidden;
   display: flex;

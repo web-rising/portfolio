@@ -96,4 +96,7 @@ export default {
     margin-bottom: 2.5rem;
     overflow: hidden;
 }
+
+
+
 </style>

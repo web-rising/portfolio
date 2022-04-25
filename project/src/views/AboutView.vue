@@ -44,6 +44,7 @@
             :position="member.position"
             :gitlink="member.git"
             :inlink="member.in"
+            :maillink="member.mail"
           />
         </div>
       </section>
@@ -86,36 +87,29 @@ export default {
            image2: "heo1.jpg",
            position: "Founder, CEO",
            git: "https://github.com/heochristopher",
-           in: "",
+           in: "https://www.linkedin.com/in/heochristopher/",
+           mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=christopher.heo1223@gmail.com"
          },
          {
            name: "Jason Chen",
-           image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
+           image1: "jason.jpg",
+           image2: "jason.jpg",
            position: "Co-founder, Creative Director",
-           git: "https://github.com/web-rising",
-           in: "",
+           git: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jasonc3805@gmail.com"
          },
          {
            name: "Michael Chen",
            image1: "michael.jpg",
            image2: "michael.jpg",
-           position: "Lead Developer",
+           position: "Developer",
            git: "https://github.com/Blanku-cloud",
-           in: "",
-         },
-         {
-           name: "Michael Frid",
-           image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
-           position: "Lead Developer",
-           git: "https://github.com/web-rising",
-           in: "",
          },
          {
            name: "Johnson Wang",
-           image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
+           image1: "johnson.jpg",
+           image2: "johnson.jpg",
            position: "Developer",
-           git: "https://github.com/web-rising",
-           in: "",
+           git: "https://github.com/J0hns0n-Wang",
          },
        ]
      }
@@ -203,7 +197,4 @@ export default {
   background-size: cover;
 }
 
-.waves1 {
-  background-image: url('../assets/waves1.svg');
-}
 </style>

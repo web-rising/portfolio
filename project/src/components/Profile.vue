@@ -13,7 +13,7 @@
                 <a class="gitmark" :href="gitlink" target="_blank">
                     <img src="../assets/gitmark.png" alt="">
                 </a>
-                <a class="inmark" :href="inlink" target="_blank">
+                <a v-if="inlink" class="inmark" :href="inlink" target="_blank">
                     <img src="../assets/inmark.png" alt="">
                 </a>
                 <a class="gmail" :href="maillink" target="_blank">
@@ -42,7 +42,11 @@ export default {
         image2: String,
         position: String,
         gitlink: String,
-        inlink: String,
+        inlink: {
+            type: String,
+            required: false
+        },
+        maillink: String,
     }
 }
 </script>
@@ -51,6 +55,10 @@ export default {
 *{
     transition: 0.3s;
 }
+ h4 {
+     margin-top: 0.5rem;
+ }
+
 .profile {
     width: 20rem;
     height: 34rem;

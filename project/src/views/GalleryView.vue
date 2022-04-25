@@ -31,8 +31,4 @@ export default {
   background-position: center;
   background-size: cover;
 }
-
-.waves5 {
-  background-image: url('../assets/waves5.svg');
-}
 </style>

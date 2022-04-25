@@ -7,7 +7,7 @@
           <h2 class="hello">Hello.</h2>
           <h2 class="weare">We are WebRising.</h2>
         </div>
-      <p class="built">Built by high school developers — for you, for free.</p>
+      <h5 class="built">Built by high school developers — for you, for free.</h5>
       </div>
     </section>
      <section class='work'>

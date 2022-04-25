@@ -1,8 +1,9 @@
 <template>
   <div class="work">
     <div class="container">
-        <h3>Our work.</h3>
-        <p>A showcase of our most recent projects.</p>
+        <!-- <h3>Our work.</h3>
+        <p>A showcase of our most recent projects.</p> -->
+        <h3>Work in progress...</h3>
     </div>
   </div>
 </template>
@@ -15,7 +16,7 @@ export default {
 
 <style scoped>
 .container {
-  height: 85vh;
+  height: 100vh;
   background-color: #151515;
   color: #fff;
   display: flex;

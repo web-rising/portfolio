@@ -205,7 +205,7 @@ mounted() {
 
 .business {
   position: absolute;
-  width:70%
+  width:70%;
 }
 
 .work {

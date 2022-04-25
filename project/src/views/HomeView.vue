@@ -7,7 +7,7 @@
           <h2 class="hello">Hello.</h2>
           <h2 class="weare">We are WebRising.</h2>
         </div>
-      <h5 class="built">Built by high school developers — for you, for free.</h5>
+      <p class="built">Built by high school developers — for you, for free.</p>
       </div>
     </section>
      <section class='work'>
@@ -196,7 +196,7 @@ mounted() {
 .net {
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

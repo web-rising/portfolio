@@ -141,7 +141,7 @@ export default {
   align-items: start;
   justify-content: space-around; */
   margin-top: 9rem;
-  height: 45vh;
+  height: 60vh;
   width: 55rem;
 }
 
@@ -172,7 +172,6 @@ export default {
 .trunk {
   background-color: #151515;
   height: 50vh;
-  margin-top: 10rem;
   width: 100%;
 }
 
@@ -195,15 +194,4 @@ export default {
   flex-wrap: wrap;
 }
 
-.spacer {
-  aspect-ratio: 960/250;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.waves1 {
-  background-image: url('../assets/waves1.svg');
-}
 </style>

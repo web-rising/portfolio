@@ -60,7 +60,7 @@ export default {
   position: relative;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .nav-list {

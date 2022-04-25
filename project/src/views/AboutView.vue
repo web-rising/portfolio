@@ -96,7 +96,8 @@ export default {
            image1: "jason.jpg",
            image2: "jason.jpg",
            position: "Co-founder, Creative Director",
-           git: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jasonc3805@gmail.com"
+           git: "https://github.com/jchn3805",
+           mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jasonc3805@gmail.com"
          },
          {
            name: "Michael Chen",
@@ -104,6 +105,7 @@ export default {
            image2: "michael.jpg",
            position: "Developer",
            git: "https://github.com/Blanku-cloud",
+           mail: "pokemondinner321@gmail.com"
          },
          {
            name: "Johnson Wang",

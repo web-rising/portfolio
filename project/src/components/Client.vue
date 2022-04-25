@@ -39,6 +39,7 @@ export default {
     object-fit: cover;
     justify-content: center;
     margin: 1rem;
+    overflow: hidden;
 }
 
 .pic:hover .mask {

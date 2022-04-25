@@ -1,32 +1,33 @@
 <template>
   <div class="about">
-    <div class="container">
-      <section class="trunk" id="trunk" ref="trunkRef"></section>
       <section class="mission">
-        <h3>Our mission.</h3>
-        <div class="info">
-          <div class="grid">
-          <p>
-            WebRising is a non-profit organization that connects volunteer high school
-            developers to small businesses in need of a web-based platform to market
-            their business, completely free of charge.
-          </p>
-          <p>
-            We seek to help small businesses navigate the advent of
-            web-based platforms while empowering volunteers with real-world
-            experience and a greater sense of community.
-          </p>
-        </div>
-        <div class="grid">
-          <p>
-            Whether you need a static website to simply showcase your business
-            and display important information, or a platform to expedite sales
-            — we've got you covered. Our team has the resources and technical expertise to craft a streamlined platform.
-          </p>
-          <p>
-            Let's craft something beautiful.
-          </p>
-        </div>
+        <section class="trunk" id="trunk" ref="trunkRef"></section>
+        <div class="container">
+          <h3>Our mission.</h3>
+          <div class="info">
+            <div class="grid">
+              <p>
+                WebRising is a non-profit organization that connects volunteer high school
+                developers to small businesses in need of a web-based platform to market
+                their business, completely free of charge.
+              </p>
+              <p>
+                We seek to help small businesses navigate the advent of
+                web-based platforms while empowering volunteers with real-world
+                experience and a greater sense of community.
+              </p>
+            </div>
+            <div class="grid">
+              <p>
+                Whether you need a static website to simply showcase your business
+                and display important information, or a platform to expedite sales
+                — we've got you covered. Our team has the resources and technical expertise to craft a streamlined platform.
+              </p>
+              <p>
+                Let's craft something beautiful.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <div class="spacer"></div>
@@ -49,8 +50,7 @@
           />
         </div>
       </section>
-    </div>
-  </div>
+        </div>
 </template>
 
 <script>
@@ -119,6 +119,7 @@ export default {
 </script>
 
 <style scoped>
+
 .container {
   /* background-color: #e4c7ff; */
   /* background-color: #151515; */
@@ -126,18 +127,18 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
 .mission {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: space-around; */
+  align-items: center;
+  justify-content: center;
   margin-top: 25vh;
   height: 60vh;
-  width: 55rem;
+  /* width: 55rem; */
 }
 
 .info {
@@ -145,6 +146,7 @@ export default {
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
+  width: 55rem;
 }
 
 .grid {
@@ -155,7 +157,7 @@ export default {
   width: 25rem;
 }
 .spacer{
-  height: 50vh;
+  height: 30vh;
 }
 .grid p {
   padding: 1rem 0;
@@ -172,7 +174,7 @@ export default {
   width: 100%;
   z-index: -1;
   position: absolute;
-  margin-bottom: 170vh;
+  margin-top: 30vh;
 }
 
 .team {

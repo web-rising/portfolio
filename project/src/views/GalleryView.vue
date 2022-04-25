@@ -24,11 +24,4 @@ export default {
   justify-content: center;
 }
 
-.spacer {
-  aspect-ratio: 960/250;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 </style>

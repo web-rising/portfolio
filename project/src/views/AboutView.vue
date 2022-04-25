@@ -187,13 +187,4 @@ export default {
   align-items: center;
   flex-wrap: wrap;
 }
-
-.spacer {
-  aspect-ratio: 960/250;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 </style>

@@ -75,8 +75,8 @@ export default {
   scaleMobile: 1.00,
   color: 0x96455e,
   backgroundColor: 0x151515,
-  spacing: 1.50,
-  chaos: 2.00
+  spacing: 2.0,
+  chaos: 3.00
   })
    },
    data() {
@@ -135,7 +135,7 @@ export default {
   flex-direction: column;
   align-items: start;
   justify-content: space-around; */
-  margin-top: 9rem;
+  margin-top: 25vh;
   height: 60vh;
   width: 55rem;
 }
@@ -172,7 +172,7 @@ export default {
   width: 100%;
   z-index: -1;
   position: absolute;
-  margin-bottom: 165vh;
+  margin-bottom: 170vh;
 }
 
 .team {

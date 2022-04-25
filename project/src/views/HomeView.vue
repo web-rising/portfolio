@@ -12,14 +12,16 @@
     </section>
      <section class='work'>
       <div class='container'>
-        <Client
-       v-for="(client, index) in clients"
+        <div class="grid">
+          <Client
+            v-for="(client, index) in clients"
             :key="index"
             :image="client.image"
             :name="client.name"
             :description="client.description"
         />
-        <p>Check out more of our work.</p>
+        </div>
+        <p><router-link to="/gallery" class="link">Check out more of our work.</router-link></p>
       </div>
     </section>
     <section class="net" id="net" ref="netRef">
@@ -153,9 +155,14 @@ mounted() {
       clients: [
         {
           image: "heo1.jpg",
-          name: "K-Spirit Taekwondo.",
-          description: "A Brooklyn Taekwondo studio."
-        }
+          name: "K-Spirit Taekwondo",
+          description: "A Brooklyn Taekwondo Studio."
+        },
+        {
+          image: "heo1.jpg",
+          name: "K-Spirit Taekwondo",
+          description: "A Brooklyn Taekwondo Studio."
+        },
       ]
     }
   }
@@ -183,7 +190,7 @@ mounted() {
 }
 
 .splashtext h2 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 .net {
@@ -199,13 +206,14 @@ mounted() {
 .business {
   position: absolute;
 }
+
 .work {
-  height: 50vh;
+  min-height: 120vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
 }
 .involve {
@@ -219,14 +227,35 @@ mounted() {
 }
 
 .container {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   padding: 0 5rem;
   overflow: hidden;
-  width: 70%;
+  /* width: 70%; */
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 2rem 1rem;
+}
+
+.link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
 }
 
 .start {
@@ -241,7 +270,7 @@ mounted() {
   cursor: pointer;
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .contact:hover {

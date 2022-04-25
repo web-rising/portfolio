@@ -64,7 +64,7 @@ export default {
   justify-content: space-between;
   padding: 1.2rem 5rem;
   /* transition: all 0.5s; */
-  z-index: 1;
+  z-index: 3;
 }
 
 .sticky {
@@ -92,7 +92,7 @@ export default {
   position: relative;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
 .nav-list {

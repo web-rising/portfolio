@@ -135,7 +135,7 @@ export default {
   align-items: start;
   justify-content: space-around; */
   margin-top: 9rem;
-  height: 45vh;
+  height: 60vh;
   width: 55rem;
 }
 
@@ -166,7 +166,6 @@ export default {
 .trunk {
   background-color: #151515;
   height: 50vh;
-  margin-top: 10rem;
   width: 100%;
 }
 

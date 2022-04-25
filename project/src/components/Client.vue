@@ -28,23 +28,28 @@ export default {
 </script>
 
 <style scoped>
-* {
+/* * {
     transition: 0.3s;
-}
+} */
 
 .pic {
     display: flex;
     flex-direction: column;
     align-items: center;
-    object-fit:cover;
+    object-fit: cover;
     justify-content: center;
+    margin: 1rem;
 }
 
 .pic:hover .mask {
     opacity: 1;
 }
 
-.pic:hover h4, h5 {
+.pic:hover img {
+    transform: scale(1.1);
+}
+
+h4, h5 {
     color: #fff;
 }
 
@@ -53,7 +58,7 @@ img {
     height: 35rem;
     object-fit: cover;
     overflow: hidden;
-    margin: 1rem;
+    transition: 0.3s;
 }
 .mask {
     width: 35rem;
@@ -63,8 +68,9 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     z-index: 1;
     opacity: 0;
+    transition: 0.3s;
 }
 </style>

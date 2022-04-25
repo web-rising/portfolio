@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <div class="container">
+      <section class="trunk" id="trunk" ref="trunkRef"></section>
       <section class="mission">
         <h3>Our mission.</h3>
         <div class="info">
@@ -28,7 +29,7 @@
         </div>
         </div>
       </section>
-      <section class="trunk" id="trunk" ref="trunkRef"></section>
+      <div class="spacer"></div>
       <section class="team">
         <div class="teaminfo">
           <h3>Our team.</h3>
@@ -120,7 +121,7 @@ export default {
 <style scoped>
 .container {
   /* background-color: #e4c7ff; */
-  background-color: #151515;
+  /* background-color: #151515; */
   color: #fff;
   position: relative;
   display: flex;
@@ -153,7 +154,9 @@ export default {
   justify-content: start;
   width: 25rem;
 }
-
+.spacer{
+  height: 50vh;
+}
 .grid p {
   padding: 1rem 0;
   font-size: 1.3rem;
@@ -165,8 +168,11 @@ export default {
 
 .trunk {
   background-color: #151515;
-  height: 50vh;
+  height: 150vh;
   width: 100%;
+  z-index: -1;
+  position: absolute;
+  margin-bottom: 165vh;
 }
 
 .team {

@@ -83,9 +83,9 @@ export default {
          {
            name: "Christopher Heo",
            image1: "heo1.jpg",
-           image2: "heo2.jpg",
+           image2: "heo1.jpg",
            position: "Founder, CEO",
-           git: "https://github.com/web-rising",
+           git: "https://github.com/heochristopher",
            in: "",
          },
          {
@@ -97,9 +97,10 @@ export default {
          },
          {
            name: "Michael Chen",
-           image: "https://i.pinimg.com/originals/ab/92/b0/ab92b0e5e7293909720321304fe2b527.png",
+           image1: "michael.jpg",
+           image2: "michael.jpg",
            position: "Lead Developer",
-           git: "https://github.com/web-rising",
+           git: "https://github.com/Blanku-cloud",
            in: "",
          },
          {

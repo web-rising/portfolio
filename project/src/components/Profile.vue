@@ -1,12 +1,8 @@
 <template>
     <div class="profile">
-        <div class="pic" v-if="!mobile" @mouseover="mouseOn" @mouseleave="mouseOff">
-             <img v-if="!hover" :src="require(`@/assets/profiles/${image1}`)" class="pic" alt="" id="pic1">
-             <img v-if="hover" :src="require(`@/assets/profiles/${image2}`)" class="pic" alt="" id="pic2">
-        </div>
-        <div class="pic" v-if="mobile" @click="mobileTouch">
-             <img v-if="!touched" :src="require(`@/assets/profiles/${image1}`)" class="pic" alt="" id="pic1">
-             <img v-if="touched" :src="require(`@/assets/profiles/${image2}`)" class="pic" alt="" id="pic2">
+        <div class="pic-container" >
+             <img :src="require(`@/assets/profiles/${image1}`)" class="pic" alt="" id="pic1">
+             <img :src="require(`@/assets/profiles/${image2}`)" class="pic" alt="" id="pic2">
         </div>
         <div class="container">
             <div class="person">
@@ -34,29 +30,11 @@ export default {
     name: "TeamProfile",
     data() {
         return {
-            hover: false,
-            mobile: false,
-            touched: false
         }
     },
     methods: {
-        mouseOn() {
-            setTimeout(() => {this.hover = true}, 200)
-        },
-        mouseOff() {
-            setTimeout(() => {this.hover = false}, 100)
-        },
-        mobileTouch() {
-            this.touched = !this.touched
-        },
-        isMobile(){
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                this.mobile = true
-            }
-        }
     },
     created: function() {
-        this.isMobile()
     },
     props: {
         name: String,
@@ -70,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+*{
+    transition: 0.3s;
+}
 .profile {
     width: 20rem;
     height: 34rem;
@@ -78,7 +59,14 @@ export default {
     overflow: hidden;
 }
 
-.pic {
+.pic-container {
+    width: 20rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.pic{
     width: 20rem;
     height: 25rem;
     object-fit: cover;
@@ -86,11 +74,19 @@ export default {
     margin-bottom: 1rem;
 }
 
-/* .container {
-    display: flex;
-    align-items: initial;
-    justify-content: space-between;
-} */
+.pic-container #pic2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.pic-container:hover #pic2{
+    opacity: 1;
+}
 
 .links {
     display: flex;

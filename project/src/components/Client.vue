@@ -1,8 +1,12 @@
 <template>
   <div class="client">
-    <img @mouseover="mouseOn" @mouseleave="mouseOff" :src="require(`@/assets/clients/${image}`)" alt="">
-    <h2 v-if="hover">{{name}}</h2>
-    <h6 v-if="hover">{{description}}</h6>
+    <div class="pic">
+        <img :src="require(`@/assets/clients/${image}`)" alt="">
+        <div class="mask">
+            <h4>{{name}}</h4>
+            <h5>{{description}}</h5>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -11,29 +15,9 @@ export default {
     name: "coolClient",
     data() {
         return {
-            hover: false,
-            mobile: false,
-            touched: false
         }
     },
     methods: {
-        mouseOn() {
-            setTimeout(() => {this.hover = true}, 200)
-        },
-        mouseOff() {
-            setTimeout(() => {this.hover = false}, 100)
-        },
-        mobileTouch() {
-            this.touched = !this.touched
-        },
-        isMobile(){
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                this.mobile = true
-            }
-        }
-    },
-    created: function() {
-        this.isMobile()
     },
     props: {
         image: String,
@@ -44,15 +28,43 @@ export default {
 </script>
 
 <style scoped>
+* {
+    transition: 0.3s;
+}
+
+.pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit:cover;
+    justify-content: center;
+}
+
+.pic:hover .mask {
+    opacity: 1;
+}
+
+.pic:hover h4, h5 {
+    color: #fff;
+}
+
 img {
-    width: 20rem;
-    height: 20rem;
+    width: 35rem;
+    height: 35rem;
     object-fit: cover;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
-
-h2, h6 {
+.mask {
+    width: 35rem;
+    height: 35rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    opacity: 0;
 }
-
 </style>

@@ -82,7 +82,8 @@ export default {
 
 .nav-list li a:hover {
     text-decoration: underline;
-    opacity: 0.6;
+    /* opacity: 0.6; */
+    color: #96455e;
 }
 
 .git {

@@ -68,7 +68,7 @@ export default {
 }
 
 .sticky {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   /* background-color: rgba(0, 0, 0, 0.15); */
   padding: 1.2rem 5rem;
 }
@@ -83,7 +83,8 @@ export default {
 
 .sticky .nav-list li a:hover {
   text-decoration: underline;
-  opacity: 0.6;
+  /* opacity: 0.6; */
+  color: #96455e;
 }
 
 .logo,
@@ -112,7 +113,8 @@ export default {
 
 .nav-list li a:hover {
   text-decoration: underline;
-  opacity: 0.6;
+  /* opacity: 0.6; */
+  color: #96455e;
 }
 
 </style>

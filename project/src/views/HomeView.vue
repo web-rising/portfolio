@@ -66,7 +66,6 @@
 
 <script>
 import BIRDS from 'vanta/src/vanta.birds'
-// import TRUNK from 'vanta/src/vanta.trunk'
 import NET from 'vanta/src/vanta.net'
 import Client from '@/components/Client.vue'
 
@@ -255,7 +254,7 @@ mounted() {
 }
 
 .link:hover {
-  opacity: 0.7;
+  color: #96455e;
   text-decoration: underline;
 }
 
@@ -264,7 +263,8 @@ mounted() {
 }
 
 .start:hover .contact {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: #96455e;
 }
 
 .contact {
@@ -275,6 +275,7 @@ mounted() {
 }
 
 .contact:hover {
-  opacity: 0.7;
+  /* opacity: 0.7; */
+  text-decoration: underline;
 }
 </style>

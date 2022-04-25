@@ -136,8 +136,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25vh;
-  height: 60vh;
+  height: 100vh;
   /* width: 55rem; */
 }
 
@@ -157,7 +156,7 @@ export default {
   width: 25rem;
 }
 .spacer{
-  height: 30vh;
+  height: 20vh;
 }
 .grid p {
   padding: 1rem 0;

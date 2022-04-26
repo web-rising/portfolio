@@ -124,8 +124,8 @@ mounted() {
   mouseControls: false,
   touchControls: false,
   gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
+  maxHeight: 200.00,
+  maxWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
   backgroundColor: 0x151515,
@@ -141,8 +141,8 @@ mounted() {
    mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
+  maxHeight: 200.00,
+  maxWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
   color: 0x96455e,
@@ -208,7 +208,7 @@ mounted() {
 }
 
 .work {
-  min-height: 130vh;
+  max-height: 120vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -277,5 +277,28 @@ mounted() {
 .contact:hover {
   /* opacity: 0.7; */
   text-decoration: underline;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (min-width: 600px) {
+
+} */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
 }
 </style>

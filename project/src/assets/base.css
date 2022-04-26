@@ -63,7 +63,7 @@ li {
   /* font-family: 'Noto Sans', sans-serif; */
 }
 
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) {
   .nav-list li a {
     padding-left: 4.2rem;
   }
@@ -149,4 +149,27 @@ li {
   header.nav {
     padding: 1rem 2rem;
   }
+} */
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (min-width: 600px) {
+
+} */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
 }

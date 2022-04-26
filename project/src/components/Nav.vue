@@ -16,15 +16,19 @@
         <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">Contact Us</a>
       </li>
     </ul>
+    <Burger/>
   </div>
 </template>
 
 <script>
 // import gsap from "gsap"
+import Burger from "./Burger.vue"
 
 export default {
   name: "NavBar",
-  components: {},
+  components: {
+    Burger
+  },
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -117,4 +121,12 @@ export default {
   color: #96455e;
 }
 
+@media only screen and (max-width: 600px) {
+  .nav {
+    padding: 1rem 2rem;
+  }
+  .nav-list {
+    display: none
+  }
+}
 </style>

@@ -114,6 +114,14 @@ export default {
            position: "Developer",
            git: "https://github.com/J0hns0n-Wang",
          },
+         {
+           name: "Hashir Abbasi",
+           image1: "hashir.jpg",
+           image2: "hashir.jpg",
+           position: "Developer",
+           git: "https://github.com/guardianinferno",
+           mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hashirabbasi112@gmail.com"
+         },
        ]
      }
    }

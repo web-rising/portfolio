@@ -21,3 +21,4 @@ Vue.use(vueMq,{
     desktop: Infinity
   }
 })
+ 

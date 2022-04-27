@@ -1,13 +1,13 @@
 <template>
-    <div class="footer">
+    <div class="footer" :class="$mq">
         <div class="container">
             <div class="links">
-                <h5 class="email">team@webrising.org</h5>
-                <a class="git" href="https://github.com/web-rising" target="_blank">
+                <h5 class="email" :class="$mq">team@webrising.org</h5>
+                <a class="git" :class="$mq" href="https://github.com/web-rising" target="_blank">
                     <img src="../assets/github.svg" alt="">
                 </a>
             </div>
-            <ul class="nav-list">
+            <ul class="nav-list" :class="$mq">
                 <li>
                     <router-link to="/about">About Us</router-link>
                 </li>
@@ -19,7 +19,7 @@
                 </li>
             </ul>
             </div>
-        <h6 class="copyright">Copyright 2022 WebRising All Rights Reserved</h6>
+        <h6 class="copyright" :class="$mq">Copyright 2022 WebRising All Rights Reserved</h6>
     </div>
 </template>
 
@@ -41,6 +41,11 @@ export default {
     overflow: hidden;
 }
 
+.footer.laptop{
+    width: 100vw;
+    /* height: 100%; */
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -48,6 +53,11 @@ export default {
 
 .email {
     margin: 0 2rem;
+}
+
+.email.laptop{
+    margin: 0;
+    font-size: 1rem;
 }
 
 .copyright {
@@ -72,12 +82,23 @@ export default {
   margin-bottom: 5.5rem;
 }
 
+.nav-list.laptop{
+    width: 50%;
+    margin-right: 1rem;
+    background: red;
+
+}
+
 .nav-list li {
   list-style: none;
 }
 
 .nav-list li a {
   margin-left: 5rem;
+}
+
+.nav-list.laptop li a {
+    font-size: 0.8rem;
 }
 
 .nav-list li a:hover {
@@ -98,6 +119,12 @@ export default {
     overflow: hidden;
 }
 
+/* .git.laptop{
+    margin-left: 0;
+} */
+.copyright.laptop{
+    text-align: center;
+}
 
 
 </style>

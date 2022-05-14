@@ -1,30 +1,28 @@
 <template>
   <div class="client">
     <div class="pic">
-        <img :src="require(`@/assets/clients/${image}`)" alt="">
-        <div class="mask">
-            <h4>{{name}}</h4>
-            <h5>{{description}}</h5>
-        </div>
+      <img :src="require(`@/assets/clients/${image}`)" alt="" />
+      <div class="mask">
+        <h4>{{ name }}</h4>
+        <h5>{{ description }}</h5>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: "coolClient",
-    data() {
-        return {
-        }
-    },
-    methods: {
-    },
-    props: {
-        image: String,
-        name: String,
-        description: String,
-    },
-}
+  name: "coolClient",
+  data() {
+    return {};
+  },
+  methods: {},
+  props: {
+    image: String,
+    name: String,
+    description: String,
+  },
+};
 </script>
 
 <style scoped>
@@ -33,45 +31,47 @@ export default {
 } */
 
 .pic {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    object-fit: cover;
-    justify-content: center;
-    margin: 1rem;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: cover;
+  justify-content: center;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
 }
 
 .pic:hover .mask {
-    opacity: 1;
+  opacity: 1;
 }
 
 .pic:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-h4, h5 {
-    color: #fff;
+h4,
+h5 {
+  color: #fff;
 }
 
 img {
-    width: 35rem;
-    height: 35rem;
-    object-fit: cover;
-    overflow: hidden;
-    transition: 0.3s;
+  width: 35rem;
+  height: 35rem;
+  object-fit: cover;
+  overflow: hidden;
+  transition: 0.3s;
 }
 .mask {
-    width: 35rem;
-    height: 35rem;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: 1;
-    opacity: 0;
-    transition: 0.3s;
+  width: 35rem;
+  height: 35rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s;
 }
 </style>

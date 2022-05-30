@@ -9,7 +9,7 @@
       </div>
       <ul class="nav-list">
         <li id="about">
-          <router-link to="/about">About Us</router-link>
+          <router-link to="/about" class="aboutus">About Us</router-link>
         </li>
         <li>
           <router-link to="/gallery">Our Work</router-link>
@@ -108,26 +108,44 @@ export default {
   .container {
     padding: 0 1rem;
   }
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .nav-list li,
-  #about {
-    width: fit-content;
+  .nav-list {
+    display: flex;
+    flex-direction: column;
   }
 }
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (max-width: 768px) {
+  .nav-list li a {
+    margin-left: 2rem;
+  }
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
   .footer {
     height: 20vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .nav-list li,
-  #about {
-    width: fit-content;
+
+  .nav-list li a {
+    font-size: 1rem;
+    margin-left: 2rem;
+  }
+
+  .nav-list li a {
+    margin-left: 3rem;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
+  .footer {
+    height: 10vh;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
   .footer {
     height: 20vh;
   }

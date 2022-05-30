@@ -299,14 +299,7 @@ export default {
 
 } */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
-  .container {
-    padding: 0 1rem;
-  }
-  .splashtext h2 {
-    font-size: 4.9rem;
-  }
-}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   .involve {
@@ -328,6 +321,12 @@ export default {
   .getinvolve {
     font-size: 3.6rem;
   }
+  .net {
+    height: 50rem;
+  }
+  .container {
+    padding-left: 2.6rem;
+  }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
@@ -340,6 +339,19 @@ export default {
   .business-text,
   .getinvolve {
     font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .splashtext h2 {
+    font-size: 3.5rem;
+  }
+  .business-text,
+  .getinvolve {
+    font-size: 2rem;
+    width: 50rem;
   }
 }
 </style>

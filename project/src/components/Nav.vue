@@ -1,7 +1,6 @@
 <template>
-  <div :class="{ sticky: isActive }" class="nav">
-    <BarMenu />
-    <h1>
+  <div :class="{ sticky: isActive }" class="nav" id="nav">
+    <h1 class="logoc">
       <router-link to="/" class="logo">WebRising</router-link>
     </h1>
     <ul class="nav-list">
@@ -20,15 +19,18 @@
         >
       </li>
     </ul>
+    <BarMenu class="bar" @menu-click="openBurger" />
+    <Menu />
   </div>
 </template>
 
 <script>
 // import gsap from "gsap"
-import BarMenu from "./SVG/BarMenu.vue";
+import BarMenu from "./menu/BarMenu.vue";
+import Menu from "./menu/MenuPop.vue";
 export default {
   name: "NavBar",
-  components: { BarMenu },
+  components: { BarMenu, Menu },
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -43,6 +45,9 @@ export default {
     },
     isLoad() {
       this.isActive = true;
+    },
+    openBurger: function () {
+      this.$store.dispatch("openBuger");
     },
   },
   data() {
@@ -91,10 +96,7 @@ export default {
   color: #96455e;
 }
 
-#menu__toggle {
-  display: none;
-}
-.menu__btn {
+.bar {
   display: none;
 }
 
@@ -128,6 +130,21 @@ export default {
   color: #96455e;
 }
 @media only screen and (max-width: 600px) {
+  #nav {
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .logo {
+    font-size: 2.5rem;
+  }
+  .bar {
+    display: unset;
+    width: 1.8rem;
+  }
+  .item {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px) {

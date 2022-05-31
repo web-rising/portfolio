@@ -1,5 +1,6 @@
 <template>
   <div :class="{ sticky: isActive }" class="nav">
+    <BarMenu />
     <h1>
       <router-link to="/" class="logo">WebRising</router-link>
     </h1>
@@ -24,10 +25,10 @@
 
 <script>
 // import gsap from "gsap"
-
+import BarMenu from "./SVG/BarMenu.vue";
 export default {
   name: "NavBar",
-  components: {},
+  components: { BarMenu },
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },

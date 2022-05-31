@@ -237,7 +237,7 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -245,7 +245,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   padding: 0 5rem;
   overflow: hidden;
   /* width: 70%; */

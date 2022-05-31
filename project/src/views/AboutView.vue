@@ -1,135 +1,133 @@
 <template>
   <div class="about">
-      <section class="mission">
-        <section class="trunk" id="trunk" ref="trunkRef"></section>
-        <div class="container">
-          <h3>Our mission.</h3>
-          <div class="info">
-            <div class="grid">
-              <p>
-                WebRising is a non-profit organization that connects volunteer high school
-                developers to small businesses in need of a web-based platform to market
-                their business, completely free of charge.
-              </p>
-              <p>
-                We seek to help small businesses navigate the advent of
-                web-based platforms while empowering volunteers with real-world
-                experience and a greater sense of community.
-              </p>
-            </div>
-            <div class="grid">
-              <p>
-                Whether you need a static website to simply showcase your business
-                and display important information, or a platform to expedite sales
-                — we've got you covered. Our team has the resources and technical expertise to craft a streamlined platform.
-              </p>
-              <p>
-                Let's craft something beautiful.
-              </p>
-            </div>
+    <section class="mission">
+      <section class="trunk" id="trunk" ref="trunkRef"></section>
+      <div class="container">
+        <h3>Our mission.</h3>
+        <div class="info">
+          <div class="grid">
+            <p>
+              WebRising is a non-profit organization that connects volunteer
+              high school developers to small businesses in need of a web-based
+              platform to market their business, completely free of charge.
+            </p>
+            <p>
+              We seek to help small businesses navigate the advent of web-based
+              platforms while empowering volunteers with real-world experience
+              and a greater sense of community.
+            </p>
+          </div>
+          <div class="grid">
+            <p>
+              Whether you need a static website to simply showcase your business
+              and display important information, or a platform to expedite sales
+              — we've got you covered. Our team has the resources and technical
+              expertise to craft a streamlined platform.
+            </p>
+            <p>Let's craft something beautiful.</p>
           </div>
         </div>
-      </section>
-      <div class="spacer"></div>
-      <section class="team">
-        <div class="teaminfo">
-          <h3>Our team.</h3>
-          <p>Meet our dedicated team of designers, artists, and writers.</p>
-        </div>
-        <div class="profiles">
-          <Profile
-            v-for="(member, index) in members"
-            :key="index"
-            :name="member.name"
-            :image1="member.image1"
-            :image2="member.image2"
-            :position="member.position"
-            :gitlink="member.git"
-            :inlink="member.in"
-            :maillink="member.mail"
-          />
-        </div>
-      </section>
-        </div>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <section class="team">
+      <div class="teaminfo">
+        <h3>Our team.</h3>
+        <p>Meet our dedicated team of designers, artists, and writers.</p>
+      </div>
+      <div class="profiles">
+        <Profile
+          v-for="(member, index) in members"
+          :key="index"
+          :name="member.name"
+          :image1="member.image1"
+          :image2="member.image2"
+          :position="member.position"
+          :gitlink="member.git"
+          :inlink="member.in"
+          :maillink="member.mail"
+        />
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-import Profile from "../components/Profile.vue"
+import Profile from "../components/Profile.vue";
 // import NET from 'vanta/src/vanta.net'
-import TRUNK from 'vanta/src/vanta.trunk'
+import TRUNK from "vanta/src/vanta.trunk";
 
 export default {
-   name: "MissionView",
-   components: {
-     Profile,
-   },
-   mounted() {
-     this.vantaEffect = TRUNK({
-  el: this.$refs.trunkRef,
-   mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x96455e,
-  backgroundColor: 0x151515,
-  spacing: 2.0,
-  chaos: 3.00
-  })
-   },
-   data() {
-     return {
-       members: [
-         {
-           name: "Christopher Heo",
-           image1: "heo1.jpg",
-           image2: "heo1.jpg",
-           position: "Founder, CEO",
-           git: "https://github.com/heochristopher",
-           in: "https://www.linkedin.com/in/heochristopher/",
-           mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=christopher.heo1223@gmail.com"
-         },
-         {
-           name: "Jason Chen",
-           image1: "jason.jpg",
-           image2: "jason.jpg",
-           position: "Co-founder, Creative Director",
-           git: "https://github.com/jchn3805",
-           mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jasonc3805@gmail.com"
-         },
-         {
-           name: "Michael Chen",
-           image1: "michael.jpg",
-           image2: "michael.jpg",
-           position: "Developer",
-           git: "https://github.com/Blanku-cloud",
-           mail: "pokemondinner321@gmail.com"
-         },
-         {
-           name: "Johnson Wang",
-           image1: "johnson.jpg",
-           image2: "johnson.jpg",
-           position: "Developer",
-           git: "https://github.com/J0hns0n-Wang",
-         },
-         {
-           name: "Hashir Abbasi",
-           image1: "hashir.jpg",
-           image2: "hashir.jpg",
-           position: "Developer",
-           git: "https://github.com/guardianinferno",
-           mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hashirabbasi112@gmail.com"
-         },
-       ]
-     }
-   }
-}
+  name: "MissionView",
+  components: {
+    Profile,
+  },
+  mounted() {
+    this.vantaEffect = TRUNK({
+      el: this.$refs.trunkRef,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x96455e,
+      backgroundColor: 0x151515,
+      spacing: 2.0,
+      chaos: 3.0,
+    });
+  },
+  data() {
+    return {
+      members: [
+        {
+          name: "Christopher Heo",
+          image1: "heo1.jpg",
+          image2: "heo1.jpg",
+          position: "Founder, CEO",
+          git: "https://github.com/heochristopher",
+          in: "https://www.linkedin.com/in/heochristopher/",
+          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=christopher.heo1223@gmail.com",
+        },
+        {
+          name: "Jason Chen",
+          image1: "jason.jpg",
+          image2: "jason.jpg",
+          position: "Co-founder, Creative Director",
+          git: "https://github.com/jchn3805",
+          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jasonc3805@gmail.com",
+        },
+        {
+          name: "Michael Chen",
+          image1: "michael.jpg",
+          image2: "michael.jpg",
+          position: "Developer",
+          git: "https://github.com/Blanku-cloud",
+          mail: "pokemondinner321@gmail.com",
+        },
+        {
+          name: "Johnson Wang",
+          image1: "johnson.jpg",
+          image2: "johnson.jpg",
+          position: "Developer",
+          git: "https://github.com/J0hns0n-Wang",
+        },
+        {
+          name: "Hashir Abbasi",
+          image1: "hashir.jpg",
+          image2: "hashir.jpg",
+          position: "Developer",
+          git: "https://github.com/guardianinferno",
+          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hashirabbasi112@gmail.com",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
-
 .container {
   /* background-color: #e4c7ff; */
   /* background-color: #151515; */
@@ -137,7 +135,7 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -153,7 +151,7 @@ export default {
 .info {
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   width: 55rem;
 }
@@ -161,11 +159,11 @@ export default {
 .grid {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 25rem;
 }
-.spacer{
+.spacer {
   height: 20vh;
 }
 .grid p {

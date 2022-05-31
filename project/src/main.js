@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store/index";
+import { store } from "./store";
 //prefix css for all
 import "./assets/base.css";
 Vue.config.productionTip = false;

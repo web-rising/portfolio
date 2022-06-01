@@ -20,17 +20,17 @@
       </li>
     </ul>
     <BarMenu class="bar" @menu-click="openBurger" />
-    <Menu />
+    <MenuPop />
   </div>
 </template>
 
 <script>
 // import gsap from "gsap"
 import BarMenu from "./menu/BarMenu.vue";
-import Menu from "./menu/MenuPop.vue";
+import MenuPop from "./menu/MenuPop.vue";
 export default {
   name: "NavBar",
-  components: { BarMenu, Menu },
+  components: { BarMenu, MenuPop },
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -152,6 +152,9 @@ export default {
     padding-left: 2.6rem;
     padding-right: 2rem;
   }
+  .logo {
+    font-size: 2.2rem;
+  }
   .nav-list li a {
     margin-left: 2rem;
   }
@@ -163,9 +166,17 @@ export default {
   .nav {
     padding-left: 2.6rem;
   }
+  .logo {
+    font-size: 2.8rem;
+  }
+  .nav-list li a {
+    margin-left: 2rem;
+  }
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
+  .logo {
+    font-size: 3.5rem;
+  }
 }
 
 @media only screen and (max-width: 1400px) {

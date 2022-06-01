@@ -301,33 +301,9 @@ export default {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .involve {
-    height: 35vh;
-  }
-  .splashtext h2 {
-    font-size: 4.5rem;
-  }
-}
+
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-  .splashtext h2 {
-    font-size: 4.9rem;
-  }
-  .involve {
-    height: 35vh;
-  }
-  .business-text,
-  .getinvolve {
-    font-size: 3.6rem;
-  }
-  .net {
-    height: 50rem;
-  }
-  .container {
-    padding-left: 2.6rem;
-  }
-}
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
   .involve {
@@ -346,12 +322,41 @@ export default {
     padding: 0 1rem;
   }
   .splashtext h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+  }
+  .built {
+    font-size: 1.2rem;
   }
   .business-text,
   .getinvolve {
     font-size: 2rem;
     width: 50rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .involve {
+    height: 35vh;
+  }
+  .splashtext h2 {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .splashtext h2 {
+    font-size: 4.5rem;
+  }
+  .involve {
+    height: 35vh;
+  }
+  .business-text,
+  .getinvolve {
+    font-size: 3.6rem;
+  }
+  .net {
+    height: 50rem;
+  }
+  .container {
+    padding-left: 2.6rem;
   }
 }
 </style>

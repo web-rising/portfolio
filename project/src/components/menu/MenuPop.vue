@@ -1,64 +1,45 @@
 <template>
   <div class="hamburger" v-show="isOpenBuger">
     <div class="hamburger-container">
-      <router-link to="/" @click="closeBuger"
-        ><div class="logo"></div
-      ></router-link>
-      <div class="burger">
-        <img
-          class="close"
-          src="../assets/close.svg"
-          alt=""
-          @click="closeBuger"
-        />
+      <div class="vwevwe">
+        <h1>
+          <router-link to="/" class="logo">WebRising</router-link>
+        </h1>
+        <CloseMen @close-click="closeBuger" class="close" />
       </div>
-      <ul class="nav-list">
-        <li>
-          <router-link to="/about" @click="closeBuger">About Us</router-link>
-        </li>
-        <li>
-          <router-link to="/updates" @click="closeBuger"
-            >News & Updates</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/classes" @click="closeBuger">Classes</router-link>
-        </li>
-        <li>
-          <router-link to="/gallery" @click="closeBuger">Gallery</router-link>
-        </li>
-      </ul>
-      <div class="footer">
-        <!-- <p>Telephone</p>
-				<p>Email</p>
-				<p>Address</p> -->
-        <h5>K-Spirit Taekwondo</h5>
-        <p>{{ this.data.address[0].text }}</p>
-        <p>{{ this.data.number[0].text }}</p>
-        <p>{{ this.data.email[0].text }}</p>
-        <div class="media">
-          <a :href="this.data.facebook.url" target="_blank"
-            ><img class="fb" src="../assets/facebook.svg" alt=""
-          /></a>
-          <a :href="this.data.instagram.url" target="_blank"
-            ><img class="ig" src="../assets/instagram.svg" alt=""
-          /></a>
-        </div>
+      <div class="licontainter">
+        <ul class="nav-list">
+          <li>
+            <router-link to="/about" id="about" class="item" @click="closeBuger"
+              >About Us</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/gallery" class="item" @click="closeBuger"
+              >Our Work</router-link
+            >
+          </li>
+          <li>
+            <a
+              class="item"
+              href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org"
+              target="_blank"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import footer from "../prismicHelpers/footer.js";
-console.log(footer);
-
+import CloseMen from "./CloseMen.vue";
 export default {
-  name: "Menu",
+  components: { CloseMen },
+  name: "MenuPop",
   data() {
-    return {
-      data: footer,
-    };
+    return {};
   },
   methods: {
     closeBuger: function () {
@@ -94,49 +75,39 @@ export default {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .logo {
-  position: fixed;
   top: 1.3rem;
   left: 1.3rem;
   height: 4rem;
-  width: 4rem;
-  border-radius: 2rem;
-  background-color: #151515;
+  width: fit-content;
+  text-decoration: none;
+  color: #151515;
+  font-size: 2.5rem;
 }
 
-.burger {
-  position: fixed;
-  right: 1.3rem;
-  top: 1.3rem;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 2rem;
+.vwevwe {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  overflow: hidden;
-  cursor: pointer;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1.5rem;
 }
 
 .close {
-  position: absolute;
-  height: 2.2rem;
-  width: 2.2rem;
+  width: 1.8rem;
 }
-
+.licontainter {
+  margin: 0 auto;
+}
 .nav-list {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
-  margin: 1.3rem;
-  margin-top: 22vh;
 }
 
 .nav-list li {
@@ -155,41 +126,5 @@ export default {
 .nav-list li a:hover {
   /* text-decoration: underline; */
   color: red;
-}
-
-.footer {
-  position: absolute;
-  margin: 1.3rem;
-  bottom: 0rem;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
-
-.footer h5,
-p {
-  padding: 0.3rem 0.5rem;
-}
-
-.media {
-  padding: 0 0.5rem;
-  padding-top: 0.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fb {
-  width: 3rem;
-  height: 3rem;
-  object-fit: cover;
-  margin: 0.5rem 0;
-  margin-right: 1.5rem;
-}
-.ig {
-  width: 3rem;
-  height: 3rem;
-  object-fit: cover;
 }
 </style>

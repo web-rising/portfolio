@@ -129,6 +129,14 @@ export default {
   /* opacity: 0.6; */
   color: #96455e;
 }
+
+@media only screen and (max-width: 1400px) {
+}
+@media only screen and (max-width: 1200px) {
+  .logo {
+    font-size: 3.5rem;
+  }
+}
 @media only screen and (max-width: 600px) {
   #nav {
     align-items: center;
@@ -172,13 +180,5 @@ export default {
   .nav-list li a {
     margin-left: 2rem;
   }
-}
-@media only screen and (max-width: 1200px) {
-  .logo {
-    font-size: 3.5rem;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
 }
 </style>

@@ -74,4 +74,46 @@ img {
   opacity: 0;
   transition: 0.3s;
 }
+
+@media only screen and (max-width: 992px) {
+  img {
+    width: 28rem;
+    height: 35rem;
+  }
+  .mask {
+    width: 28rem;
+    height: 35rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 5rem !important;
+  }
+  img {
+    width: 25rem;
+    height: 30rem;
+  }
+  .mask {
+    width: 25rem;
+    height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 20rem;
+    height: 25rem;
+  }
+  .mask {
+    width: 20rem;
+    height: 25rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1400px) {
+}
 </style>

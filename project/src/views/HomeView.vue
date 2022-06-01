@@ -33,7 +33,7 @@
     <section class="net" id="net" ref="netRef">
       <div class="business container">
         <h2 class="business-text">Don't limit your business's potential.</h2>
-        <p>
+        <p class="subbus">
           Our team has the resources and technical expertise to craft a
           streamlined platform.
         </p>
@@ -53,7 +53,7 @@
         </div> -->
         <div class="start">
           <h2 class="getinvolve">Get involved.</h2>
-          <p>
+          <p class="getsub">
             Reach out to us to
             <a
               href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com"
@@ -305,42 +305,6 @@ export default {
 /* Large devices (laptops/desktops, 992px and up) */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
-  .involve {
-    height: 35vh;
-  }
-  .splashtext h2 {
-    font-size: 5rem;
-  }
-  .business-text,
-  .getinvolve {
-    font-size: 3rem;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .container {
-    padding: 0 1rem;
-  }
-  .splashtext h2 {
-    font-size: 3rem;
-  }
-  .built {
-    font-size: 1.2rem;
-  }
-  .business-text,
-  .getinvolve {
-    font-size: 2rem;
-    width: 50rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .involve {
-    height: 35vh;
-  }
-  .splashtext h2 {
-    font-size: 3.5rem;
-  }
-}
 @media only screen and (max-width: 992px) {
   .splashtext h2 {
     font-size: 4.5rem;
@@ -355,8 +319,79 @@ export default {
   .net {
     height: 50rem;
   }
+}
+@media only screen and (max-width: 1200px) {
+  .involve {
+    height: 35vh;
+  }
+  .splashtext h2 {
+    font-size: 5rem;
+  }
+  .business-text,
+  .getinvolve {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .involve {
+    height: 35vh;
+  }
+  .splashtext h2 {
+    font-size: 3.5rem;
+  }
+  .net {
+    justify-content: center;
+    align-items: center;
+  }
+  .business-text,
+  .getinvolve {
+    font-size: 2rem;
+    width: fit-content;
+  }
+  .business {
+    position: none;
+    text-align: center;
+    width: 40rem;
+  }
+  .subbus,
+  .getsub {
+    font-size: 1.2rem;
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 600px) {
   .container {
-    padding-left: 2.6rem;
+    padding: 0 1rem;
+  }
+  .splashtext h2 {
+    font-size: 3rem;
+  }
+  .built {
+    font-size: 1.2rem;
+  }
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+  .business-text {
+    font-size: 1.2rem;
+    width: 38rem;
+  }
+  .getinvolve {
+    font-size: 1.5rem;
+  }
+  .business {
+    position: none;
+    text-align: center;
+  }
+  .subbus {
+    width: 21rem;
+    font-size: 01rem;
+  }
+
+  .getsub {
+    font-size: 1.2rem;
   }
 }
 </style>

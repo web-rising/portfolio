@@ -16,6 +16,9 @@
         <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">Contact Us</a>
       </li>
     </ul>
+    <div class="burger">
+			<img class="menu" src="../assets/menu.svg" alt="" @click="openBurger" />
+		</div>
   </div>
 </template>
 
@@ -116,5 +119,14 @@ export default {
   /* opacity: 0.6; */
   color: #96455e;
 }
-
+@media only screen and (max-width: 600px) {
+  .nav-list{
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .burger{
+    display: none;
+  }
+} 
 </style>

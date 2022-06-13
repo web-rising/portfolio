@@ -123,6 +123,12 @@ export default {
   .nav-list{
     display: none;
   }
+.nav{
+  justify-content: space-between;
+  padding-top: 1.5rem;
+ padding-right: 2rem;
+ padding-left: 2rem;
+}
 }
 @media only screen and (min-width: 601px) {
   .burger{

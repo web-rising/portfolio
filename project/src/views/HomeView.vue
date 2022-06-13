@@ -188,7 +188,6 @@ export default {
   position: absolute;
   height: 200vh
 } */
-
 .splash {
   height: 100vh;
   width: 100%;
@@ -305,6 +304,25 @@ export default {
   }
   .splashtext h2 {
     font-size: 4.9rem;
+  }
+  .hello,
+  .weare {
+    font-size: 3rem;
+  }
+  .business-text,.getinvolve{
+    margin-bottom: 1rem;
+  }
+  a.link {
+    margin-left: 8rem;
+    padding: 0rem;
+    height: 100%;
+    overflow: hidden;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  p{
+    font-size: inherit;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */

@@ -303,13 +303,14 @@ export default {
     padding: 0 1rem;
   }
   .splashtext h2 {
-    font-size: 4.9rem;
+    font-size: 3rem;
   }
   .hello,
   .weare {
-    font-size: 3rem;
+    font-size: 20rem;
   }
-  .business-text,.getinvolve{
+  .business-text,
+  .getinvolve {
     margin-bottom: 1rem;
   }
   a.link {
@@ -321,7 +322,7 @@ export default {
   h2 {
     font-size: 2.5rem;
   }
-  p{
+  p {
     font-size: inherit;
   }
 }
@@ -348,12 +349,12 @@ export default {
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .involve {
     height: 35vh;
   }
   .splashtext h2 {
-    font-size: 5rem;
+    font-size: 7rem;
   }
   .business-text,
   .getinvolve {

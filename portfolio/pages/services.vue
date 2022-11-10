@@ -32,7 +32,6 @@ export default {
         {
           name: 'Mobile-first Design',
           logo: 'mobile.svg',
-          url: '',
           description: ['Our design process starts with mobile interfaces', 'Sites are mobile-optimized for user experience and faster load times'],
         },
       ],
